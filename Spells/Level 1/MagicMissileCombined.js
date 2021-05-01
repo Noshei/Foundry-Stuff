@@ -2,6 +2,7 @@
 // Based on macros from Crymic and Caewok
 // https://gitlab.com/crymic/foundry-vtt-macros/-/blob/master/5e/Spells/Level%201/Magic%20Missile.js
 // https://github.com/caewok/Foundry-Macros/blob/main/spells/Level%201/Magic%20Missile/RandomMagicMissileAnimation.js
+// This version rolls damage for each missile.
 
 (async()=>{
     async function wait(ms) {
