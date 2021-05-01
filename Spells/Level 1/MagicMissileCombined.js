@@ -25,7 +25,7 @@
 
         if (!canvas.fxmaster) ui.notifications.error("This macro depends on the FXMaster module. Make sure it is installed and enabled");
 
-        const file = "https://assets.forge-vtt.com/bazaar/modules/jb2a_patreon-2d960ceba80cc778/assets/Library/1st_Level/Magic_Missile/";
+        const file = "modules/jb2a_patreon/Library/1st_Level/Magic_Missile/";
         const mmA = `${file}MagicMissile_01_${color}_30ft_01_1600x400.webm`;
         const mmB = `${file}MagicMissile_01_${color}_30ft_02_1600x400.webm`;
         const mmC = `${file}MagicMissile_01_${color}_30ft_03_1600x400.webm`;
