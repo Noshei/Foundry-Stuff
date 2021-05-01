@@ -3,6 +3,7 @@
 // https://gitlab.com/crymic/foundry-vtt-macros/-/blob/master/5e/Spells/Level%201/Magic%20Missile.js
 // https://github.com/caewok/Foundry-Macros/blob/main/spells/Level%201/Magic%20Missile/RandomMagicMissileAnimation.js
 // This version rolls damage for each missile.
+// Make sure that target is not set to 1 on the spell details
 
 (async()=>{
     async function wait(ms) {
@@ -27,25 +28,25 @@
         if (!canvas.fxmaster) ui.notifications.error("This macro depends on the FXMaster module. Make sure it is installed and enabled");
 
         const file = "modules/jb2a_patreon/Library/1st_Level/Magic_Missile/";
-        const mmA = `${file}MagicMissile_01_${color}_30ft_01_1600x400.webm`;
-        const mmB = `${file}MagicMissile_01_${color}_30ft_02_1600x400.webm`;
-        const mmC = `${file}MagicMissile_01_${color}_30ft_03_1600x400.webm`;
-        const mmD = `${file}MagicMissile_01_${color}_30ft_04_1600x400.webm`;
-        const mmE = `${file}MagicMissile_01_${color}_30ft_05_1600x400.webm`;
-        const mmF = `${file}MagicMissile_01_${color}_30ft_06_1600x400.webm`;
-        const mmG = `${file}MagicMissile_01_${color}_30ft_07_1600x400.webm`;
-        const mmH = `${file}MagicMissile_01_${color}_30ft_08_1600x400.webm`;
-        const mmI = `${file}MagicMissile_01_${color}_30ft_09_1600x400.webm`;
+        const mmA = `${file}MagicMissile_01_Regular_${color}_30ft_01_1600x400.webm`;
+        const mmB = `${file}MagicMissile_01_Regular_${color}_30ft_02_1600x400.webm`;
+        const mmC = `${file}MagicMissile_01_Regular_${color}_30ft_03_1600x400.webm`;
+        const mmD = `${file}MagicMissile_01_Regular_${color}_30ft_04_1600x400.webm`;
+        const mmE = `${file}MagicMissile_01_Regular_${color}_30ft_05_1600x400.webm`;
+        const mmF = `${file}MagicMissile_01_Regular_${color}_30ft_06_1600x400.webm`;
+        const mmG = `${file}MagicMissile_01_Regular_${color}_30ft_07_1600x400.webm`;
+        const mmH = `${file}MagicMissile_01_Regular_${color}_30ft_08_1600x400.webm`;
+        const mmI = `${file}MagicMissile_01_Regular_${color}_30ft_09_1600x400.webm`;
 
-        const mmAA = `${file}MagicMissile_01_${color}_60ft_01_2800x400.webm`;
-        const mmBB = `${file}MagicMissile_01_${color}_60ft_02_2800x400.webm`;
-        const mmCC = `${file}MagicMissile_01_${color}_60ft_03_2800x400.webm`;
-        const mmDD = `${file}MagicMissile_01_${color}_60ft_04_2800x400.webm`;
-        const mmEE = `${file}MagicMissile_01_${color}_60ft_05_2800x400.webm`;
-        const mmFF = `${file}MagicMissile_01_${color}_60ft_06_2800x400.webm`;
-        const mmGG = `${file}MagicMissile_01_${color}_60ft_07_2800x400.webm`;
-        const mmHH = `${file}MagicMissile_01_${color}_60ft_08_2800x400.webm`;
-        const mmII = `${file}MagicMissile_01_${color}_60ft_09_2800x400.webm`;
+        const mmAA = `${file}MagicMissile_01_Regular_${color}_60ft_01_2800x400.webm`;
+        const mmBB = `${file}MagicMissile_01_Regular_${color}_60ft_02_2800x400.webm`;
+        const mmCC = `${file}MagicMissile_01_Regular_${color}_60ft_03_2800x400.webm`;
+        const mmDD = `${file}MagicMissile_01_Regular_${color}_60ft_04_2800x400.webm`;
+        const mmEE = `${file}MagicMissile_01_Regular_${color}_60ft_05_2800x400.webm`;
+        const mmFF = `${file}MagicMissile_01_Regular_${color}_60ft_06_2800x400.webm`;
+        const mmGG = `${file}MagicMissile_01_Regular_${color}_60ft_07_2800x400.webm`;
+        const mmHH = `${file}MagicMissile_01_Regular_${color}_60ft_08_2800x400.webm`;
+        const mmII = `${file}MagicMissile_01_Regular_${color}_60ft_09_2800x400.webm`;
 
         function random_item(items) {
         return(items[Math.floor(Math.random()*items.length)]);
@@ -135,7 +136,7 @@
         await chatMessage.update({ content: content });
         
         for(let i = 0; i < level; i++) {
-            await MagicMissilesAnimation(args[0].actor._id, args[0].targets[0]._id, COLOR);
+            await MagicMissilesAnimation(args[0].tokenId, args[0].targets[0]._id, COLOR);
         }
     }
     if (args[0].targets.length > 1){
