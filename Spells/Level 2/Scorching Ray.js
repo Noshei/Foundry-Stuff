@@ -181,18 +181,17 @@ if (args[0].targets.length === 1) {
                     }
                     if (spentTotal > raysToCast) return ui.notifications.error(`The spell fails, You assigned more bolts then you have.`);
                     
-                    let spentRays = 0;
+                    let raysRemaining = raysToCast;
 
                     for (let selected_target of selected_targets) {
-                        
                         let damageRolls = [];
                         let target = await canvas.tokens.get(selected_target.name);
                         let raysThatHit = [];
                         for (let i = 0; i < selected_target.value; i++) {
-                            ++spentRays;
+                            --raysRemaining;
                             let attackRoll = await rollAttack(target);
                             if (attackRoll.total >= target.actor.data.data.attributes.ac.value) {
-                                raysThatHit.push(i + 1 + spentRays);
+                                raysThatHit.push(raysToCast - raysRemaining);
                                 const newCritical = attackRoll.dice[0].results[0].result === 20 ? true : false;
                                 let damageRoll = await dealDamage(target, newCritical);
                                 damageRolls.push(damageRoll);
