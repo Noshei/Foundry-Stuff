@@ -46,10 +46,9 @@ async function dealDamage(target, newCritical) {
     let damageRoll_Render = await damageRoll.render();
     damageCard_Damage.push(damageRoll_Render);
 
+    //AutoAnimations.playAnimation(tokenD, target, itemD);
 
     return (damageRoll);
-
-    //AutoAnimations.playAnimation(tokenD, target, itemD);
 }
 
 // roll combine function from Kekilla
