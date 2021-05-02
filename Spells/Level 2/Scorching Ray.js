@@ -2,7 +2,7 @@
 // based on code from Caewok, Crymic, and Kekilla
 // Set item to Other, make sure target limit is not set
 // no damage formula on item
-
+// Dependants: midi-qol, Dice So Nice (not required, but supported)
 
 const actorD = game.actors.get(args[0].actor._id);
 const tokenD = canvas.tokens.get(args[0].tokenId);
@@ -25,6 +25,7 @@ async function wait(ms) {
 
 async function rollAttack(target) {
     let attackRoll = await new Roll(`(1d20 + ${rollProf} + ${rollMod})`).roll();
+    game.dice3d?.showForRoll(attackRoll);
 
     let attackRoll_Render = await attackRoll.render();
     if (attackRoll.dice[0].results[0].result === 20) {
@@ -42,6 +43,7 @@ async function rollAttack(target) {
 async function dealDamage(target, newCritical) {
     let numDice = newCritical ? `4d6` : `2d6`;
     const damageRoll = new Roll(`${numDice}`).roll();
+    game.dice3d?.showForRoll(damageRoll);
 
     let damageRoll_Render = await damageRoll.render();
     damageCard_Damage.push(damageRoll_Render);
@@ -110,7 +112,7 @@ if (args[0].targets.length === 1) {
     let raysThatHit = [];
     for (let i = 0; i < raysToCast; i++) {
         let attackRoll = await rollAttack(target);
-        if (attackRoll.total >= target.actor.data.data.attributes.ac.value) {
+        if (attackRoll.total >= target.actor.data.data.attributes.ac.value && attackRoll.dice[0].results[0].result > 1) {
             raysThatHit.push(i+1);
             const newCritical = attackRoll.dice[0].results[0].result === 20 ? true : false;
             let damageRoll = await dealDamage(target, newCritical);
@@ -125,20 +127,20 @@ if (args[0].targets.length === 1) {
         if (damageRolls.length === 1) {
             damageRollAll = damageRolls[0];
             damageCard_Hits.push(`<div class="midi-qol-flex-container">
-                <div>Ray ${raysThatHit[0]} hits</div>
-                <div class="midi-qol-target-npc midi-qol-target-name" id="${target.id}"> ${target.name}</div>
-                <div><img src="${target.data.img}" width="30" height="30" style="border:0px"></div>
-                <div> for ${damageRollAll.total} damage</div>
+                <div class="midi-qol-target-npc midi-qol-target-name" id="${target.id}">
+                    <img src="${target.data.img}" width="30" height="30" style="border:0px">
+                </div>
+                <div> takes ${damageRollAll.total} fire damage from <div style="font-size: x-small">(Ray ${raysThatHit[0]})</div></div>
             </div>`);
         } else {
             damageRollAll = combineRolls(damageRolls);
             let rayText = raysThatHit.join(', ');
-            rayText = rayText.replace(/,([^,]*)$/, ' and $1');
+            rayText = rayText.replace(/,([^,]*)$/, ' & $1');
             damageCard_Hits.push(`<div class="midi-qol-flex-container">
-                <div>Rays ${rayText} hits</div>
-                <div class="midi-qol-target-npc midi-qol-target-name" id="${target.id}"> ${target.name}</div>
-                <div><img src="${target.data.img}" width="30" height="30" style="border:0px"></div>
-                <div> for ${damageRollAll.total} damage</div>
+                <div class="midi-qol-target-npc midi-qol-target-name" id="${target.id}">
+                    <img src="${target.data.img}" width="30" height="30" style="border:0px">
+                </div>
+                <div> takes ${damageRollAll.total} fire damage from <div style="font-size: x-small">(Rays ${rayText})</div></div>
             </div>`);
         }
 
@@ -189,7 +191,7 @@ if (args[0].targets.length === 1) {
                         for (let i = 0; i < selected_target.value; i++) {
                             --raysRemaining;
                             let attackRoll = await rollAttack(target);
-                            if (attackRoll.total >= target.actor.data.data.attributes.ac.value) {
+                            if (attackRoll.total >= target.actor.data.data.attributes.ac.value && attackRoll.dice[0].results[0].result > 1) {
                                 raysThatHit.push(raysToCast - raysRemaining);
                                 const newCritical = attackRoll.dice[0].results[0].result === 20 ? true : false;
                                 let damageRoll = await dealDamage(target, newCritical);
@@ -205,20 +207,26 @@ if (args[0].targets.length === 1) {
                             if (damageRolls.length === 1) {
                                 damageRollAll = damageRolls[0];
                                 damageCard_Hits.push(`<div class="midi-qol-flex-container">
-                                    <div>Ray ${raysThatHit[0]} hits</div>
-                                    <div class="midi-qol-target-npc midi-qol-target-name" id="${target.id}"> ${target.name}</div>
-                                    <div><img src="${target.data.img}" width="30" height="30" style="border:0px"></div>
-                                    <div> for ${damageRollAll.total} damage</div>
+                                    <div class="midi-qol-target-npc midi-qol-target-name" id="${target.id}">
+                                        <img src="${target.data.img}" width="30" height="30" style="border:0px">
+                                    </div>
+                                    <div> takes ${damageRollAll.total} fire damage from <div style="font-size: x-small">(Ray ${raysThatHit[0]})</div></div>
                                 </div>`);
                             } else {
                                 damageRollAll = combineRolls(damageRolls);
                                 let rayText = raysThatHit.join(', ');
-                                rayText = rayText.replace(/,([^,]*)$/, ' and $1');
-                                damageCard_Hits.push(`<div class="midi-qol-flex-container">
-                                    <div>Rays ${rayText} hits</div>
+                                rayText = rayText.replace(/,([^,]*)$/, ' & $1');
+                                /*damageCard_Hits.push(`<div class="midi-qol-flex-container">
+                                    <div>Rays ${rayText} hit</div>
                                     <div class="midi-qol-target-npc midi-qol-target-name" id="${target.id}"> ${target.name}</div>
                                     <div><img src="${target.data.img}" width="30" height="30" style="border:0px"></div>
                                     <div> for ${damageRollAll.total} damage</div>
+                                </div>`);*/
+                                damageCard_Hits.push(`<div class="midi-qol-flex-container">
+                                    <div class="midi-qol-target-npc midi-qol-target-name" id="${target.id}">
+                                        <img src="${target.data.img}" width="30" height="30" style="border:0px">
+                                    </div>
+                                    <div> takes ${damageRollAll.total} fire damage from <div style="font-size: x-small">(Rays ${rayText})</div></div>
                                 </div>`);
                             }
 
