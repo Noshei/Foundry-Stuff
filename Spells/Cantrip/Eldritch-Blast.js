@@ -15,6 +15,7 @@ const rollMod = args[0].rollData.abilities[rollAbility].mod || 0;
 let damageCard_Attack = [];
 let damageCard_Damage = [];
 let damageCard_Hits = [];
+let damageType = ["force", "Force"];
 
 async function wait(ms) {
     return new Promise((resolve) => {
@@ -89,9 +90,9 @@ async function updateChatCard() {
     number = 0
     content = await content.replace(/#/g, function () { return ++number; });
 
-    let damage_list = damageCard_Damage.join('<div style="text-align:center">(Force)</div>');
+    let damage_list = damageCard_Damage.join(`<div style="text-align:center">(${damageType[1]})</div>`);
     const damage_list_search = /<div class="midi-qol-damage-roll">[\s\S]*<div class="end-midi-qol-damage-roll">/g;
-    const damage_list_replace = `<div class="midi-qol-damage-roll"><div style="text-align:center">(Force)</div>${damage_list}<div class="end-midi-qol-damage-roll">`;
+    const damage_list_replace = `<div class="midi-qol-damage-roll"><div style="text-align:center">(${damageType[1]})</div>${damage_list}<div class="end-midi-qol-damage-roll">`;
     content = await content.replace(damage_list_search, damage_list_replace);
 
     let hits_list = damageCard_Hits.join('');
@@ -129,7 +130,7 @@ if (args[0].targets.length === 1) {
                 <div class="midi-qol-target-npc midi-qol-target-name" id="${target.id}">
                     <img src="${target.data.img}" width="30" height="30" style="border:0px">
                 </div>
-                <div> takes ${damageRollAll.total} force damage from <div style="font-size: x-small">(Blast ${blastsThatHit[0]})</div></div>
+                <div> takes ${damageRollAll.total} ${damageType[0]} damage from <div style="font-size: x-small">(Blast ${blastsThatHit[0]})</div></div>
             </div>`);
         } else {
             damageRollAll = combineRolls(damageRolls);
@@ -139,7 +140,7 @@ if (args[0].targets.length === 1) {
                 <div class="midi-qol-target-npc midi-qol-target-name" id="${target.id}">
                     <img src="${target.data.img}" width="30" height="30" style="border:0px">
                 </div>
-                <div> takes ${damageRollAll.total} force damage from <div style="font-size: x-small">(Blast ${rayText})</div></div>
+                <div> takes ${damageRollAll.total} ${damageType[0]} damage from <div style="font-size: x-small">(Blast ${rayText})</div></div>
             </div>`);
         }
 
@@ -147,7 +148,7 @@ if (args[0].targets.length === 1) {
             actorD,
             tokenD,
             damageRollAll.total,
-            "fire",
+            damageType[0],
             [target],
             damageRollAll,
             {
@@ -209,7 +210,7 @@ if (args[0].targets.length === 1) {
                                     <div class="midi-qol-target-npc midi-qol-target-name" id="${target.id}">
                                         <img src="${target.data.img}" width="30" height="30" style="border:0px">
                                     </div>
-                                    <div> takes ${damageRollAll.total} force damage from <div style="font-size: x-small">(Blast ${blastsThatHit[0]})</div></div>
+                                    <div> takes ${damageRollAll.total} ${damageType[0]} damage from <div style="font-size: x-small">(Blast ${blastsThatHit[0]})</div></div>
                                 </div>`);
                             } else {
                                 damageRollAll = combineRolls(damageRolls);
@@ -219,7 +220,7 @@ if (args[0].targets.length === 1) {
                                     <div class="midi-qol-target-npc midi-qol-target-name" id="${target.id}">
                                         <img src="${target.data.img}" width="30" height="30" style="border:0px">
                                     </div>
-                                    <div> takes ${damageRollAll.total} force damage from <div style="font-size: x-small">(Blast ${rayText})</div></div>
+                                    <div> takes ${damageRollAll.total} ${damageType[0]} damage from <div style="font-size: x-small">(Blast ${rayText})</div></div>
                                 </div>`);
                             }
 
@@ -227,7 +228,7 @@ if (args[0].targets.length === 1) {
                                 actorD,
                                 tokenD,
                                 damageRollAll.total,
-                                "fire",
+                                damageType[0],
                                 [target],
                                 damageRollAll,
                                 {
