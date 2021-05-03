@@ -1,4 +1,4 @@
-// Scorching Ray Macro
+// Eldritch Blast Macro
 // based on code from Caewok, Crymic, and Kekilla
 // Set item to Other, make sure target limit is not set
 // no damage formula on item
@@ -8,8 +8,7 @@ const actorD = game.actors.get(args[0].actor._id);
 const tokenD = canvas.tokens.get(args[0].tokenId);
 const itemD = args[0].item;
 const getItem = actorD.items.getName(itemD.name);
-const spellLevel = Number(args[0].spellLevel);
-const raysToCast = 1 + spellLevel;
+const blastsToCast = actorD.data.data.details.level <= 4 ? 1 : actorD.data.data.details.level <= 10 ? 2 : actorD.data.data.details.level <= 16 ? 3 : actorD.data.data.details.level <= 20 ? 4 : 4
 const rollProf = args[0].rollData.prof;
 const rollAbility = args[0].rollData.attributes.spellcasting;
 const rollMod = args[0].rollData.abilities[rollAbility].mod || 0;
@@ -41,7 +40,7 @@ async function rollAttack(target) {
 }
 
 async function dealDamage(target, newCritical) {
-    let numDice = newCritical ? `4d6` : `2d6`;
+    let numDice = newCritical ? `2d10` : `1d10`;
     const damageRoll = new Roll(`${numDice}`).roll();
     game.dice3d?.showForRoll(damageRoll);
 
@@ -83,16 +82,16 @@ async function updateChatCard() {
     const flexRow_replace = `<div class="card-buttons"><div class="flexrow 2"><div class="midi-qol-attack-roll"><div class="end-midi-qol-attack-roll"></div></div><div class="midi-qol-damage-roll"><div class="end-midi-qol-damage-roll"></div></div></div><div class="flexrow 1"><div class="midi-qol-bonus-roll">`;
     content = await content.replace(flexRow_search, flexRow_replace);
 
-    let attack_list = damageCard_Attack.join('<div style="text-align:center">Ray #</div>');
+    let attack_list = damageCard_Attack.join('<div style="text-align:center">Blast #</div>');
     const attack_list_search = /<div class="midi-qol-attack-roll">[\s\S]*<div class="end-midi-qol-attack-roll">/g;
-    const attack_list_replace = `<div class="midi-qol-attack-roll"><div style="text-align:center">Ray #</div>${attack_list}<div class="end-midi-qol-attack-roll">`;
+    const attack_list_replace = `<div class="midi-qol-attack-roll"><div style="text-align:center">Blast #</div>${attack_list}<div class="end-midi-qol-attack-roll">`;
     content = await content.replace(attack_list_search, attack_list_replace);
     number = 0
     content = await content.replace(/#/g, function () { return ++number; });
 
-    let damage_list = damageCard_Damage.join('<div style="text-align:center">(Fire)</div>');
+    let damage_list = damageCard_Damage.join('<div style="text-align:center">(Force)</div>');
     const damage_list_search = /<div class="midi-qol-damage-roll">[\s\S]*<div class="end-midi-qol-damage-roll">/g;
-    const damage_list_replace = `<div class="midi-qol-damage-roll"><div style="text-align:center">(Fire)</div>${damage_list}<div class="end-midi-qol-damage-roll">`;
+    const damage_list_replace = `<div class="midi-qol-damage-roll"><div style="text-align:center">(Force)</div>${damage_list}<div class="end-midi-qol-damage-roll">`;
     content = await content.replace(damage_list_search, damage_list_replace);
 
     let hits_list = damageCard_Hits.join('');
@@ -109,11 +108,11 @@ async function updateChatCard() {
 if (args[0].targets.length === 1) {
     let damageRolls = [];
     let target = await canvas.tokens.get(args[0].targets[0]._id);
-    let raysThatHit = [];
-    for (let i = 0; i < raysToCast; i++) {
+    let blastsThatHit = [];
+    for (let i = 0; i < blastsToCast; i++) {
         let attackRoll = await rollAttack(target);
         if (attackRoll.total >= target.actor.data.data.attributes.ac.value && attackRoll.dice[0].results[0].result > 1) {
-            raysThatHit.push(i+1);
+            blastsThatHit.push(i+1);
             const newCritical = attackRoll.dice[0].results[0].result === 20 ? true : false;
             let damageRoll = await dealDamage(target, newCritical);
             damageRolls.push(damageRoll);
@@ -130,17 +129,17 @@ if (args[0].targets.length === 1) {
                 <div class="midi-qol-target-npc midi-qol-target-name" id="${target.id}">
                     <img src="${target.data.img}" width="30" height="30" style="border:0px">
                 </div>
-                <div> takes ${damageRollAll.total} fire damage from <div style="font-size: x-small">(Ray ${raysThatHit[0]})</div></div>
+                <div> takes ${damageRollAll.total} force damage from <div style="font-size: x-small">(Blast ${blastsThatHit[0]})</div></div>
             </div>`);
         } else {
             damageRollAll = combineRolls(damageRolls);
-            let rayText = raysThatHit.join(', ');
+            let rayText = blastsThatHit.join(', ');
             rayText = rayText.replace(/,([^,]*)$/, ' & $1');
             damageCard_Hits.push(`<div class="midi-qol-flex-container">
                 <div class="midi-qol-target-npc midi-qol-target-name" id="${target.id}">
                     <img src="${target.data.img}" width="30" height="30" style="border:0px">
                 </div>
-                <div> takes ${damageRollAll.total} fire damage from <div style="font-size: x-small">(Rays ${rayText})</div></div>
+                <div> takes ${damageRollAll.total} force damage from <div style="font-size: x-small">(Blast ${rayText})</div></div>
             </div>`);
         }
 
@@ -165,12 +164,12 @@ if (args[0].targets.length === 1) {
     let all_targets = args[0].targets;
 
     for (let target of all_targets) {
-        targetList += `<tr><td>${target.name}</td><td><input type="number" id="target" min="0" max="${raysToCast}" name="${target._id}"></td></tr>`;
+        targetList += `<tr><td>${target.name}</td><td><input type="number" id="target" min="0" max="${blastsToCast}" name="${target._id}"></td></tr>`;
     }
 
-    let the_content = `<p>You have currently <b>${raysToCast}</b> total Scorching Rays.</p><form class="flexcol"><table width="100%"><tbody><tr><th>Target</th><th>Number Rays</th></tr>${targetList}</tbody></table></form>`;
+    let the_content = `<p>You have currently <b>${blastsToCast}</b> total Eldritch Blasts.</p><form class="flexcol"><table width="100%"><tbody><tr><th>Target</th><th>Number Blasts</th></tr>${targetList}</tbody></table></form>`;
     new Dialog({
-        title: "Scorching Ray Damage",
+        title: "Eldritch Blast Damage",
         content: the_content,
         buttons: {
             one: {
@@ -180,19 +179,19 @@ if (args[0].targets.length === 1) {
                     for (let get_total of selected_targets) {
                         spentTotal += Number(get_total.value);
                     }
-                    if (spentTotal > raysToCast) return ui.notifications.error(`The spell fails, You assigned more rays then you have.`);
+                    if (spentTotal > blastsToCast) return ui.notifications.error(`The spell fails, You assigned more blasts then you have.`);
                     
-                    let raysRemaining = raysToCast;
+                    let raysRemaining = blastsToCast;
 
                     for (let selected_target of selected_targets) {
                         let damageRolls = [];
                         let target = await canvas.tokens.get(selected_target.name);
-                        let raysThatHit = [];
+                        let blastsThatHit = [];
                         for (let i = 0; i < selected_target.value; i++) {
                             --raysRemaining;
                             let attackRoll = await rollAttack(target);
                             if (attackRoll.total >= target.actor.data.data.attributes.ac.value && attackRoll.dice[0].results[0].result > 1) {
-                                raysThatHit.push(raysToCast - raysRemaining);
+                                blastsThatHit.push(blastsToCast - raysRemaining);
                                 const newCritical = attackRoll.dice[0].results[0].result === 20 ? true : false;
                                 let damageRoll = await dealDamage(target, newCritical);
                                 damageRolls.push(damageRoll);
@@ -210,17 +209,17 @@ if (args[0].targets.length === 1) {
                                     <div class="midi-qol-target-npc midi-qol-target-name" id="${target.id}">
                                         <img src="${target.data.img}" width="30" height="30" style="border:0px">
                                     </div>
-                                    <div> takes ${damageRollAll.total} fire damage from <div style="font-size: x-small">(Ray ${raysThatHit[0]})</div></div>
+                                    <div> takes ${damageRollAll.total} force damage from <div style="font-size: x-small">(Blast ${blastsThatHit[0]})</div></div>
                                 </div>`);
                             } else {
                                 damageRollAll = combineRolls(damageRolls);
-                                let rayText = raysThatHit.join(', ');
+                                let rayText = blastsThatHit.join(', ');
                                 rayText = rayText.replace(/,([^,]*)$/, ' & $1');
                                 damageCard_Hits.push(`<div class="midi-qol-flex-container">
                                     <div class="midi-qol-target-npc midi-qol-target-name" id="${target.id}">
                                         <img src="${target.data.img}" width="30" height="30" style="border:0px">
                                     </div>
-                                    <div> takes ${damageRollAll.total} fire damage from <div style="font-size: x-small">(Rays ${rayText})</div></div>
+                                    <div> takes ${damageRollAll.total} force damage from <div style="font-size: x-small">(Blast ${rayText})</div></div>
                                 </div>`);
                             }
 
