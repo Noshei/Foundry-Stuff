@@ -8,7 +8,7 @@ const actorD = game.actors.get(args[0].actor._id);
 const tokenD = canvas.tokens.get(args[0].tokenId);
 const itemD = args[0].item;
 const getItem = actorD.items.getName(itemD.name);
-const blastsToCast = actorD.data.data.details.level <= 4 ? 1 : actorD.data.data.details.level <= 10 ? 2 : actorD.data.data.details.level <= 16 ? 3 : actorD.data.data.details.level <= 20 ? 4 : 4
+const blastsToCast = Math.min(1 + Math.floor((actorD.data.data.details.level + 1) / 6), 4);
 const rollProf = args[0].rollData.prof;
 const rollAbility = args[0].rollData.attributes.spellcasting;
 const rollMod = args[0].rollData.abilities[rollAbility].mod || 0;
