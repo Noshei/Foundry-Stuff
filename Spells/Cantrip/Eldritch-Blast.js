@@ -23,8 +23,14 @@ async function wait(ms) {
     });
 }
 
-async function rollAttack(target) {
-    let attackRoll = await new Roll(`(1d20 + ${rollProf} + ${rollMod})`).roll();
+async function rollAttack(target, adv, dis) {
+    let rollFormula = `1d20`
+    if (adv && !dis) {
+        rollFormula = `2d20kh`
+    } else if (dis && !adv) {
+        rollFormula = `2d20kl`
+    }
+    let attackRoll = await new Roll(`(${rollFormula} + ${rollProf} + ${rollMod})`).roll();
     game.dice3d?.showForRoll(attackRoll);
 
     let attackRoll_Render = await attackRoll.render();
@@ -106,141 +112,109 @@ async function updateChatCard() {
     await chatMessage.update({ content: content });
 }
 
-if (args[0].targets.length === 1) {
-    let damageRolls = [];
-    let target = await canvas.tokens.get(args[0].targets[0]._id);
-    let blastsThatHit = [];
-    for (let i = 0; i < blastsToCast; i++) {
-        let attackRoll = await rollAttack(target);
-        if (attackRoll.total >= target.actor.data.data.attributes.ac.value && attackRoll.dice[0].results[0].result > 1) {
-            blastsThatHit.push(i+1);
-            const newCritical = attackRoll.dice[0].results[0].result === 20 ? true : false;
-            let damageRoll = await dealDamage(target, newCritical);
-            damageRolls.push(damageRoll);
-        } else {
-            damageCard_Damage.push(`<div class="dice-roll"><div class="dice-result"><div class="dice-formula">0</div><h4 class="dice-total">Missed</h4></div></div>`);
-        }
-    }
+let blastList = "";
+let dropdownList = "";
+let all_targets = args[0].targets;
 
-    let damageRollAll;
-    if (damageRolls.length > 0) {
-        if (damageRolls.length === 1) {
-            damageRollAll = damageRolls[0];
-            damageCard_Hits.push(`<div class="midi-qol-flex-container">
-                <div class="midi-qol-target-npc midi-qol-target-name" id="${target.id}">
-                    <img src="${target.data.img}" width="30" height="30" style="border:0px">
-                </div>
-                <div> takes ${damageRollAll.total} ${damageType[0]} damage from <div style="font-size: x-small">(Blast ${blastsThatHit[0]})</div></div>
-            </div>`);
-        } else {
-            damageRollAll = combineRolls(damageRolls);
-            let rayText = blastsThatHit.join(', ');
-            rayText = rayText.replace(/,([^,]*)$/, ' & $1');
-            damageCard_Hits.push(`<div class="midi-qol-flex-container">
-                <div class="midi-qol-target-npc midi-qol-target-name" id="${target.id}">
-                    <img src="${target.data.img}" width="30" height="30" style="border:0px">
-                </div>
-                <div> takes ${damageRollAll.total} ${damageType[0]} damage from <div style="font-size: x-small">(Blast ${rayText})</div></div>
-            </div>`);
-        }
-
-        new MidiQOL.DamageOnlyWorkflow(
-            actorD,
-            tokenD,
-            damageRollAll.total,
-            damageType[0],
-            [target],
-            damageRollAll,
-            {
-                itemCardId: args[0].itemCardId,
-                useOther: false,
-            }
-        );
-    }
-
-    updateChatCard();
-
-} else if (args[0].targets.length > 1) {
-    let targetList = "";
-    let all_targets = args[0].targets;
-
-    for (let target of all_targets) {
-        targetList += `<tr><td>${target.name}</td><td><input type="number" id="target" min="0" max="${blastsToCast}" name="${target._id}"></td></tr>`;
-    }
-
-    let the_content = `<p>You have currently <b>${blastsToCast}</b> total Eldritch Blasts.</p><form class="flexcol"><table width="100%"><tbody><tr><th>Target</th><th>Number Blasts</th></tr>${targetList}</tbody></table></form>`;
-    new Dialog({
-        title: "Eldritch Blast Damage",
-        content: the_content,
-        buttons: {
-            one: {
-                label: "Damage", callback: async (html) => {
-                    let spentTotal = 0;
-                    let selected_targets = html.find('input#target');
-                    for (let get_total of selected_targets) {
-                        spentTotal += Number(get_total.value);
-                    }
-                    if (spentTotal > blastsToCast) return ui.notifications.error(`The spell fails, You assigned more blasts then you have.`);
-                    
-                    let raysRemaining = blastsToCast;
-
-                    for (let selected_target of selected_targets) {
-                        let damageRolls = [];
-                        let target = await canvas.tokens.get(selected_target.name);
-                        let blastsThatHit = [];
-                        for (let i = 0; i < selected_target.value; i++) {
-                            --raysRemaining;
-                            let attackRoll = await rollAttack(target);
-                            if (attackRoll.total >= target.actor.data.data.attributes.ac.value && attackRoll.dice[0].results[0].result > 1) {
-                                blastsThatHit.push(blastsToCast - raysRemaining);
-                                const newCritical = attackRoll.dice[0].results[0].result === 20 ? true : false;
-                                let damageRoll = await dealDamage(target, newCritical);
-                                damageRolls.push(damageRoll);
-                            } else {
-                                damageCard_Damage.push(`<div class="dice-roll"><div class="dice-result"><div class="dice-formula">0</div><h4 class="dice-total">Missed</h4></div></div>`);
-                            }
-                        }
-
-                        let damageRollAll;
-
-                        if (damageRolls.length > 0) {
-                            if (damageRolls.length === 1) {
-                                damageRollAll = damageRolls[0];
-                                damageCard_Hits.push(`<div class="midi-qol-flex-container">
-                                    <div class="midi-qol-target-npc midi-qol-target-name" id="${target.id}">
-                                        <img src="${target.data.img}" width="30" height="30" style="border:0px">
-                                    </div>
-                                    <div> takes ${damageRollAll.total} ${damageType[0]} damage from <div style="font-size: x-small">(Blast ${blastsThatHit[0]})</div></div>
-                                </div>`);
-                            } else {
-                                damageRollAll = combineRolls(damageRolls);
-                                let rayText = blastsThatHit.join(', ');
-                                rayText = rayText.replace(/,([^,]*)$/, ' & $1');
-                                damageCard_Hits.push(`<div class="midi-qol-flex-container">
-                                    <div class="midi-qol-target-npc midi-qol-target-name" id="${target.id}">
-                                        <img src="${target.data.img}" width="30" height="30" style="border:0px">
-                                    </div>
-                                    <div> takes ${damageRollAll.total} ${damageType[0]} damage from <div style="font-size: x-small">(Blast ${rayText})</div></div>
-                                </div>`);
-                            }
-
-                            new MidiQOL.DamageOnlyWorkflow(
-                                actorD,
-                                tokenD,
-                                damageRollAll.total,
-                                damageType[0],
-                                [target],
-                                damageRollAll,
-                                {
-                                    itemCardId: args[0].itemCardId,
-                                    useOther: false,
-                                }
-                            );
-                        }
-                    }
-                    updateChatCard();
-                }
-            }
-        }
-    }).render(true);
+for (let target of all_targets) {
+    dropdownList += `<option value="${target._id}">${target.name}</option>`;
 }
+
+for (let i = 1; i <= blastsToCast; i++) {
+    blastList += `<tr>
+                    <td><label>Eldritch Blast ${i}</label></td>
+                    <td><select name="blastTargets" id="target">
+                        ${dropdownList}
+                    </select></td>
+                    <td><input type="checkbox" id="advantage"></td>
+                    <td><input type="checkbox" id="disadvantage"></td>
+                </tr>`
+}
+
+let the_content = `<p>You have currently <b>${blastsToCast}</b> total Eldritch Blasts.</p><form class="flexcol"><table width="100%"><tbody><tr><th>Number Blasts</th><th>Target</th><th>ADV</th><th>DIS</th></tr>${blastList}</tbody></table></form>`
+new Dialog({
+    title: "Eldritch Blast Damage",
+    content: the_content,
+    buttons: {
+        one: {
+            label: "Damage", callback: async (html) => {
+                let blastCount = 0;
+                let selected_targets = html.find('select#target');
+                let selected_adv = html.find('input#advantage');
+                let selected_dis = html.find('input#disadvantage');
+
+                let target_details = {};
+
+                for (let i = 0; i < selected_targets.length; i++) {
+                    let selected_target = selected_targets[i]
+                    let adv = selected_adv[i].checked;
+                    let dis = selected_dis[i].checked;
+                    let target_data = { blast: i, adv: adv, dis: dis, id: selected_target.value }
+                    if (target_details[selected_target.value]) {
+                        target_details[selected_target.value].push(target_data);
+                    } else {
+                        target_details[selected_target.value] = [];
+                        target_details[selected_target.value].push(target_data);
+                    }
+                }
+
+                for (let target_detail in target_details) {
+                    let blast_details = target_details[target_detail]
+                    let damageRolls = [];
+                    let target = await canvas.tokens.get(target_detail);
+                    let blastsThatHit = [];
+                    for (let blast_detail of blast_details) {
+                        let attackRoll = await rollAttack(target, blast_detail.adv, blast_detail.dis);
+                        if (attackRoll.total >= target.actor.data.data.attributes.ac.value && attackRoll.dice[0].results[0].result > 1) {
+                            blastsThatHit.push(blastCount + 1);
+                            const newCritical = attackRoll.dice[0].results[0].result === 20 ? true : false;
+                            let damageRoll = await dealDamage(target, newCritical);
+                            damageRolls.push(damageRoll);
+                        } else {
+                            damageCard_Damage.push(`<div class="dice-roll"><div class="dice-result"><div class="dice-formula">0</div><h4 class="dice-total">Missed</h4></div></div>`);
+                        }
+                        ++blastCount
+                    }
+
+                    let damageRollAll;
+
+                    if (damageRolls.length > 0) {
+                        if (damageRolls.length === 1) {
+                            damageRollAll = damageRolls[0];
+                            damageCard_Hits.push(`<div class="midi-qol-flex-container">
+                                <div class="midi-qol-target-npc midi-qol-target-name" id="${target.id}">
+                                    <img src="${target.data.img}" width="30" height="30" style="border:0px">
+                                </div>
+                                <div> takes ${damageRollAll.total} ${damageType[0]} damage from <div style="font-size: x-small">(Blast ${blastsThatHit[0]})</div></div>
+                            </div>`);
+                        } else {
+                            damageRollAll = combineRolls(damageRolls);
+                            let blastText = blastsThatHit.join(', ');
+                            blastText = blastText.replace(/,([^,]*)$/, ' & $1');
+                            damageCard_Hits.push(`<div class="midi-qol-flex-container">
+                                <div class="midi-qol-target-npc midi-qol-target-name" id="${target.id}">
+                                    <img src="${target.data.img}" width="30" height="30" style="border:0px">
+                                </div>
+                                <div> takes ${damageRollAll.total} ${damageType[0]} damage from <div style="font-size: x-small">(Blast ${blastText})</div></div>
+                            </div>`);
+                        }
+
+                        new MidiQOL.DamageOnlyWorkflow(
+                            actorD,
+                            tokenD,
+                            damageRollAll.total,
+                            damageType[0],
+                            [target],
+                            damageRollAll,
+                            {
+                                itemCardId: args[0].itemCardId,
+                                useOther: false,
+                            }
+                        );
+                    }
+                }
+                updateChatCard();
+            }
+        }
+    }
+}).render(true);
