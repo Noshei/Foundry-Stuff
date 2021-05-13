@@ -13,9 +13,12 @@ const raysToCast = 1 + spellLevel;
 const rollProf = args[0].rollData.prof;
 const rollAbility = args[0].rollData.attributes.spellcasting;
 const rollMod = args[0].rollData.abilities[rollAbility].mod || 0;
+const spellCriticalThreshold = actorD.getFlag("dnd5e", "spellCriticalThreshold") || 20;
 let damageCard_Attack = [];
 let damageCard_Damage = [];
 let damageCard_Hits = [];
+
+console.log(spellCriticalThreshold);
 
 async function wait(ms) {
     return new Promise((resolve) => {
@@ -34,10 +37,11 @@ async function rollAttack(target, adv, dis) {
     game.dice3d?.showForRoll(attackRoll);
 
     let attackRoll_Render = await attackRoll.render();
-    if (attackRoll.dice[0].results[0].result === 20) {
+    let result = attackRoll.dice[0].results[0].discarded ? attackRoll.dice[0].results[1].result : attackRoll.dice[0].results[0].result
+    if (result >= spellCriticalThreshold) {
         attackRoll_Render = attackRoll_Render.replace('dice-total', 'dice-total critical');
     }
-    else if (attackRoll.dice[0].results[0].result === 1) {
+    else if (result === 1) {
         attackRoll_Render = attackRoll_Render.replace('dice-total', 'dice-total fumble');
     }
 
@@ -164,9 +168,10 @@ new Dialog({
                     let raysThatHit = [];
                     for (let ray_detail of ray_details) {
                         let attackRoll = await rollAttack(target, ray_detail.adv, ray_detail.dis);
-                        if (attackRoll.total >= target.actor.data.data.attributes.ac.value && attackRoll.dice[0].results[0].result > 1) {
+                        let result = attackRoll.dice[0].results[0].discarded ? attackRoll.dice[0].results[1].result : attackRoll.dice[0].results[0].result
+                        if ((attackRoll.total >= target.actor.data.data.attributes.ac.value && result > 1) || result >= spellCriticalThreshold) {
                             raysThatHit.push(rayCount + 1);
-                            const newCritical = attackRoll.dice[0].results[0].result === 20 ? true : false;
+                            const newCritical = result >= spellCriticalThreshold ? true : false;
                             let damageRoll = await dealDamage(target, newCritical);
                             damageRolls.push(damageRoll);
                         } else {
