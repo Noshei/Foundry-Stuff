@@ -135,15 +135,56 @@ for (let target of all_targets) {
 for (let i = 1; i <= blastsToCast; i++) {
     blastList += `<tr>
                     <td><label>Eldritch Blast ${i}</label></td>
-                    <td><select name="blastTargets" id="target">
+                    <td><select name="rayTargets" id="target">
                         ${dropdownList}
                     </select></td>
-                    <td><input type="checkbox" id="advantage"></td>
-                    <td><input type="checkbox" id="disadvantage"></td>
+                    <td><input type="checkbox" id="advantage" name="advantage"></td>
+                    <td><input type="checkbox" id="disadvantage" name="disadvantage"></td>
                 </tr>`
 }
 
-let the_content = `<p>You have currently <b>${blastsToCast}</b> total Eldritch Blasts.</p><form class="flexcol"><table width="100%"><tbody><tr><th>Number Blasts</th><th>Target</th><th>ADV</th><th>DIS</th></tr>${blastList}</tbody></table></form>`
+let the_content = ` <p>You have currently <b>${blastsToCast}</b> total Eldritch Blasts.</p>
+                    <form class="flexcol">
+                        <table width="100%">
+                            <tbody>
+                                <tr>
+                                    <th>Number Blasts</th>
+                                    <th>Target</th>
+                                    <th>ADV</th>
+                                    <th>DIS</th>
+                                </tr>
+                                <tr>
+                                    <td><b>Set All</b></td>
+                                    <td><select name="allTargets" id="Targ-All">${dropdownList}</select></td>
+                                    <td><input type="checkbox" id="ADV-All"></td>
+                                    <td><input type="checkbox" id="DIS-All"></td>
+                                </tr>
+                                ${blastList}
+                            </tbody>
+                        </table>
+                    </form>
+                    <script type = "text/javascript">
+                        document.getElementById('Targ-All').onchange = function () {
+                            console.log(this);
+                            let dropdowns = document.getElementsByName('rayTargets');
+                            console.log(dropdowns);
+                            for (let dropdown of dropdowns) {
+                                dropdown.value = this.value;
+                            }
+                        }
+                        document.getElementById('ADV-All').onclick = function () {
+                            let checkboxes = document.getElementsByName('advantage');
+                            for (let checkbox of checkboxes) {
+                                checkbox.checked = this.checked;
+                            }
+                        }
+                        document.getElementById('DIS-All').onclick = function () {
+                            let checkboxes = document.getElementsByName('disadvantage');
+                            for (let checkbox of checkboxes) {
+                                checkbox.checked = this.checked;
+                            }
+                        }
+                    </script>`
 new Dialog({
     title: "Eldritch Blast Damage",
     content: the_content,

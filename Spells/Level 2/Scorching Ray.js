@@ -67,7 +67,11 @@ async function dealDamage(target, newCritical) {
     let damageRoll_Render = await damageRoll.render();
     damageCard_Damage.push(damageRoll_Render);
 
-    //AutoAnimations.playAnimation(tokenD, target, itemD);
+    /*if (args[0].targets.length === 0) {
+        const targetD = canvas.tokens.get(target.id);
+        targetD.setTarget(true, game.user, true, false);
+        AutoAnimations.playAnimation(tokenD, targetD, itemD);
+    }*/
 
     return (damageRoll);
 }
@@ -138,12 +142,53 @@ for (let i = 1; i <= raysToCast; i++) {
                     <td><select name="rayTargets" id="target">
                         ${dropdownList}
                     </select></td>
-                    <td><input type="checkbox" id="advantage"></td>
-                    <td><input type="checkbox" id="disadvantage"></td>
+                    <td><input type="checkbox" id="advantage" name="advantage"></td>
+                    <td><input type="checkbox" id="disadvantage" name="disadvantage"></td>
                 </tr>`
 }
 
-let new_content = `<p>You have currently <b>${raysToCast}</b> total Scorching Rays.</p><form class="flexcol"><table width="100%"><tbody><tr><th>Number Rays</th><th>Target</th><th>ADV</th><th>DIS</th></tr>${rayList}</tbody></table></form>`
+let new_content = ` <p>You have currently <b>${raysToCast}</b> total Scorching Rays.</p>
+                    <form class="flexcol">
+                        <table width="100%">
+                            <tbody>
+                                <tr>
+                                    <th>Number Rays</th>
+                                    <th>Target</th>
+                                    <th>ADV</th>
+                                    <th>DIS</th>
+                                </tr>
+                                <tr>
+                                    <td><b>Set All</b></td>
+                                    <td><select name="allTargets" id="Targ-All">${dropdownList}</select></td>
+                                    <td><input type="checkbox" id="ADV-All"></td>
+                                    <td><input type="checkbox" id="DIS-All"></td>
+                                </tr>
+                                ${rayList}
+                            </tbody>
+                        </table>
+                    </form>
+                    <script type = "text/javascript">
+                        document.getElementById('Targ-All').onchange = function () {
+                            console.log(this);
+                            let dropdowns = document.getElementsByName('rayTargets');
+                            console.log(dropdowns);
+                            for (let dropdown of dropdowns) {
+                                dropdown.value = this.value;
+                            }
+                        }
+                        document.getElementById('ADV-All').onclick = function () {
+                            let checkboxes = document.getElementsByName('advantage');
+                            for (let checkbox of checkboxes) {
+                                checkbox.checked = this.checked;
+                            }
+                        }
+                        document.getElementById('DIS-All').onclick = function () {
+                            let checkboxes = document.getElementsByName('disadvantage');
+                            for (let checkbox of checkboxes) {
+                                checkbox.checked = this.checked;
+                            }
+                        }
+                    </script>`
 new Dialog({
     title: "Scorching Ray Damage",
     content: new_content,
