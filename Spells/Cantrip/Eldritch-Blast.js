@@ -129,7 +129,7 @@ let blastList = "";
 let dropdownList = "";
 
 for (let target of all_targets) {
-    let id = target.id || target._id
+    let id = target.id || target._id;
     dropdownList += `<option value="${id}">${target.name}</option>`;
 }
 for (let i = 1; i <= blastsToCast; i++) {
