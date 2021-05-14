@@ -165,9 +165,7 @@ let the_content = ` <p>You have currently <b>${blastsToCast}</b> total Eldritch 
                     </form>
                     <script type = "text/javascript">
                         document.getElementById('Targ-All').onchange = function () {
-                            console.log(this);
                             let dropdowns = document.getElementsByName('rayTargets');
-                            console.log(dropdowns);
                             for (let dropdown of dropdowns) {
                                 dropdown.value = this.value;
                             }
