@@ -1,12 +1,14 @@
 // Scorching Ray Macro
 // based on code from Caewok, Crymic, and Kekilla
-// Set item to Other, make sure target limit is not set
+// Set item to Other, make sure target information is not set at all
 // no damage formula on item
+// will pull valid targets in range if no targets are selected
 // Dependants: midi-qol, Dice So Nice (not required, but supported)
 
 const actorD = game.actors.get(args[0].actor._id);
 const tokenD = canvas.tokens.get(args[0].tokenId);
 const itemD = args[0].item;
+const itemRange = itemD.data.range.value;
 const getItem = actorD.items.getName(itemD.name);
 const spellLevel = Number(args[0].spellLevel);
 const raysToCast = 1 + spellLevel;
@@ -14,16 +16,23 @@ const rollProf = args[0].rollData.prof;
 const rollAbility = args[0].rollData.attributes.spellcasting;
 const rollMod = args[0].rollData.abilities[rollAbility].mod || 0;
 const spellCriticalThreshold = actorD.getFlag("dnd5e", "spellCriticalThreshold") || 20;
+const withinRangeOfToken = canvas.tokens.placeables.filter(t => t.id !== tokenD.id && t.actor.data.type === "npc" && t.visible && withinRange(token, t, itemRange));
+let all_targets = args[0].targets.length > 0 ? args[0].targets : withinRangeOfToken;
 let damageCard_Attack = [];
 let damageCard_Damage = [];
 let damageCard_Hits = [];
-
-console.log(spellCriticalThreshold);
 
 async function wait(ms) {
     return new Promise((resolve) => {
         setTimeout(resolve, ms);
     });
+}
+
+// function from Kekilla
+function withinRange(origin, target, range) {
+    const ray = new Ray(origin, target);
+    let distance = canvas.grid.measureDistances([{ ray }], { gridSpaces: true })[0];
+    return range >= distance;
 }
 
 async function rollAttack(target, adv, dis) {
@@ -118,7 +127,6 @@ async function updateChatCard() {
 
 let rayList = "";
 let dropdownList = "";
-let all_targets = args[0].targets;
 
 for (let target of all_targets) {
     dropdownList += `<option value="${target._id}">${target.name}</option>`;
