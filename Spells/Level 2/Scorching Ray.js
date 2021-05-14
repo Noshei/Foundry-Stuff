@@ -129,7 +129,8 @@ let rayList = "";
 let dropdownList = "";
 
 for (let target of all_targets) {
-    dropdownList += `<option value="${target._id}">${target.name}</option>`;
+    let id = target.id || target._id
+    dropdownList += `<option value="${id}">${target.name}</option>`;
 }
 for (let i = 1; i <= raysToCast; i++) {
     rayList += `<tr>
