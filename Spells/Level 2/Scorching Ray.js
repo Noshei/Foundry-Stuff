@@ -8,6 +8,7 @@
 const actorD = game.actors.get(args[0].actor._id);
 const tokenD = canvas.tokens.get(args[0].tokenId);
 const itemD = args[0].item;
+const itemData = actorD.items.get(itemD.id);
 const itemRange = itemD.data.range.value;
 const getItem = actorD.items.getName(itemD.name);
 const spellLevel = Number(args[0].spellLevel);
@@ -21,6 +22,8 @@ let all_targets = args[0].targets.length > 0 ? args[0].targets : withinRangeOfTo
 let damageCard_Attack = [];
 let damageCard_Damage = [];
 let damageCard_Hits = [];
+
+console.log(getItem);
 
 async function wait(ms) {
     return new Promise((resolve) => {
@@ -66,13 +69,18 @@ async function dealDamage(target, newCritical) {
 
     let damageRoll_Render = await damageRoll.render();
     damageCard_Damage.push(damageRoll_Render);
-
-    /*if (args[0].targets.length === 0) {
-        const targetD = canvas.tokens.get(target.id);
-        targetD.setTarget(true, game.user, true, false);
-        AutoAnimations.playAnimation(tokenD, targetD, itemD);
-    }*/
-
+/*
+    if (args[0].targets.length === 0) {
+        let targetD = canvas.tokens.get(target.id);
+        targetD.setTarget(true, { user: game.user, releaseOthers: true, groupSelection: false });
+        await wait(1000);
+        console.log(tokenD);
+        console.log(targetD);
+        console.log(game.user.targets);
+        AutoAnimations.playAnimation(tokenD, targetD, getItem);
+        targetD.setTarget(false, { user: game.user, releaseOthers: true, groupSelection: false });
+    }
+*/
     return (damageRoll);
 }
 
