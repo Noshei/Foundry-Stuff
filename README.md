@@ -6,7 +6,7 @@
   
   <details>
     <summary>Eldritch Blast</summary>
-    <img src="Spell Detail Images/Eldritch-Blast.png" width="50%" />
+    <img src="Spell Detail Images/Eldritch-Blast.png" />
     
   </details>
   
@@ -16,7 +16,7 @@
   
   <details>
     <summary>Magic Missiles</summary>
-    <img src="Spell Detail Images/Magic-Missiles.png" width="50%" />
+    <img src="Spell Detail Images/Magic-Missiles.png" />
     
   </details>
   
@@ -26,7 +26,7 @@
   
   <details>
     <summary>Scorching Ray</summary>
-    <img src="Spell Detail Images/Scorching-Ray.png" width="50%" />
+    <img src="Spell Detail Images/Scorching-Ray.png" />
     
   </details>
   
@@ -64,7 +64,7 @@
   
   <details>
     <summary>Starry Form</summary>
-    <img src="Spell Detail Images/Starry-Form.png" width="50%" />
+    <img src="Spell Detail Images/Starry-Form.png" />
     
   </details>
   
