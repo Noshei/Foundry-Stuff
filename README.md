@@ -1,6 +1,8 @@
 # Foundry-Stuff
 
 ## Spell Details
+Each spell or feature may require different configuration on the Item Details within foundry.  Below are images of how I have configured each spell, please make sure to setup your spells to match.
+
 <details>
   <summary>Cantrips</summary>
   
