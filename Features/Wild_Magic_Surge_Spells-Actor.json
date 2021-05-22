@@ -1,0 +1,1899 @@
+{
+  "_id": "o55REou9KUGNV3UM",
+  "name": "Wild Magic Surge Spells",
+  "type": "character",
+  "data": {
+    "abilities": {
+      "str": {
+        "value": 9,
+        "proficient": 0
+      },
+      "dex": {
+        "value": 15,
+        "proficient": 0
+      },
+      "con": {
+        "value": 15,
+        "proficient": 0
+      },
+      "int": {
+        "value": 10,
+        "proficient": 0
+      },
+      "wis": {
+        "value": 14,
+        "proficient": 0
+      },
+      "cha": {
+        "value": 17,
+        "proficient": 0
+      }
+    },
+    "attributes": {
+      "ac": {
+        "value": 12
+      },
+      "hp": {
+        "value": 10,
+        "min": 0,
+        "max": 10,
+        "temp": null,
+        "tempmax": null
+      },
+      "init": {
+        "value": 0,
+        "bonus": 0
+      },
+      "movement": {
+        "burrow": 0,
+        "climb": 0,
+        "fly": 0,
+        "swim": 0,
+        "walk": 30,
+        "units": "ft",
+        "hover": false
+      },
+      "senses": {
+        "darkvision": 0,
+        "blindsight": 0,
+        "tremorsense": 0,
+        "truesight": 0,
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": "cha",
+      "death": {
+        "success": 0,
+        "failure": 0
+      },
+      "encumbrance": {
+        "value": null,
+        "max": null
+      },
+      "exhaustion": 0,
+      "inspiration": false
+    },
+    "details": {
+      "biography": {
+        "value": "",
+        "public": ""
+      },
+      "alignment": "",
+      "race": "",
+      "background": "",
+      "xp": {
+        "value": 0,
+        "min": 0,
+        "max": 300
+      },
+      "appearance": "",
+      "trait": "",
+      "ideal": "",
+      "bond": "",
+      "flaw": "",
+      "attunedItemsMax": "3",
+      "attunedItemsCount": 0,
+      "maxPreparedSpells": null,
+      "gender": "",
+      "age": "",
+      "height": "",
+      "weight": "",
+      "eyes": "",
+      "skin": "",
+      "hair": "",
+      "notes1name": "",
+      "notes2name": "",
+      "notes3name": "",
+      "notes4name": ""
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [],
+        "custom": ""
+      },
+      "weaponProf": {
+        "value": [],
+        "custom": ""
+      },
+      "armorProf": {
+        "value": [],
+        "custom": ""
+      },
+      "toolProf": {
+        "value": [],
+        "custom": ""
+      }
+    },
+    "currency": {
+      "pp": 0,
+      "gp": 0,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "skills": {
+      "acr": {
+        "value": 0,
+        "ability": "dex"
+      },
+      "ani": {
+        "value": 0,
+        "ability": "wis"
+      },
+      "arc": {
+        "value": 0,
+        "ability": "int"
+      },
+      "ath": {
+        "value": 0,
+        "ability": "str"
+      },
+      "dec": {
+        "value": 0,
+        "ability": "cha"
+      },
+      "his": {
+        "value": 0,
+        "ability": "int"
+      },
+      "ins": {
+        "value": 0,
+        "ability": "wis"
+      },
+      "itm": {
+        "value": 0,
+        "ability": "cha"
+      },
+      "inv": {
+        "value": 0,
+        "ability": "int"
+      },
+      "med": {
+        "value": 0,
+        "ability": "wis"
+      },
+      "nat": {
+        "value": 0,
+        "ability": "int"
+      },
+      "prc": {
+        "value": 0,
+        "ability": "wis"
+      },
+      "prf": {
+        "value": 0,
+        "ability": "cha"
+      },
+      "per": {
+        "value": 0,
+        "ability": "cha"
+      },
+      "rel": {
+        "value": 0,
+        "ability": "int"
+      },
+      "slt": {
+        "value": 0,
+        "ability": "dex"
+      },
+      "ste": {
+        "value": 0,
+        "ability": "dex"
+      },
+      "sur": {
+        "value": 0,
+        "ability": "wis"
+      }
+    },
+    "spells": {
+      "spell1": {
+        "value": 0,
+        "override": null
+      },
+      "spell2": {
+        "value": 0,
+        "override": null
+      },
+      "spell3": {
+        "value": 0,
+        "override": null
+      },
+      "spell4": {
+        "value": 0,
+        "override": null
+      },
+      "spell5": {
+        "value": 0,
+        "override": null
+      },
+      "spell6": {
+        "value": 0,
+        "override": null
+      },
+      "spell7": {
+        "value": 0,
+        "override": null
+      },
+      "spell8": {
+        "value": 0,
+        "override": null
+      },
+      "spell9": {
+        "value": 0,
+        "override": null
+      },
+      "pact": {
+        "value": 0,
+        "override": null
+      }
+    },
+    "bonuses": {
+      "mwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "msak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rsak": {
+        "attack": "",
+        "damage": ""
+      },
+      "abilities": {
+        "check": "",
+        "save": "",
+        "skill": ""
+      },
+      "spell": {
+        "dc": ""
+      }
+    },
+    "resources": {
+      "primary": {
+        "value": null,
+        "max": null,
+        "sr": false,
+        "lr": false,
+        "label": ""
+      },
+      "secondary": {
+        "value": null,
+        "max": null,
+        "sr": false,
+        "lr": false,
+        "label": ""
+      },
+      "tertiary": {
+        "value": null,
+        "max": null,
+        "sr": false,
+        "lr": false,
+        "label": ""
+      }
+    }
+  },
+  "sort": 500001,
+  "flags": {
+    "exportSource": {
+      "world": "test1",
+      "system": "dnd5e",
+      "coreVersion": "0.7.9",
+      "systemVersion": "1.2.4"
+    }
+  },
+  "img": "icons/vtt-512.png",
+  "token": {
+    "flags": {
+      "autorotate": {
+        "enabled": null
+      },
+      "perfect-vision": {
+        "visionRules": "default",
+        "monoVisionColor": "",
+        "sightLimit": null,
+        "_version": 1
+      }
+    },
+    "name": "Wild Magic Surge Spells",
+    "displayName": 0,
+    "img": "icons/vtt-512.png",
+    "tint": "",
+    "width": 1,
+    "height": 1,
+    "scale": 1,
+    "mirrorX": false,
+    "mirrorY": true,
+    "lockRotation": false,
+    "rotation": 0,
+    "vision": true,
+    "dimSight": 60,
+    "brightSight": 0,
+    "dimLight": 0,
+    "brightLight": 0,
+    "sightAngle": 360,
+    "lightAngle": 360,
+    "lightColor": "",
+    "lightAlpha": 0,
+    "lightAnimation": {
+      "type": "",
+      "speed": 5,
+      "intensity": 5
+    },
+    "actorId": "o55REou9KUGNV3UM",
+    "actorLink": false,
+    "disposition": 1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": ""
+    },
+    "randomImg": false
+  },
+  "items": [
+    {
+      "_id": "olRTPKiCC2c2jce5",
+      "name": "Fog Cloud",
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "<p>AoE on Sorcerer</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 243",
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": 1,
+          "units": "hour"
+        },
+        "target": {
+          "value": 20,
+          "width": null,
+          "units": "ft",
+          "type": "sphere"
+        },
+        "range": {
+          "value": 120,
+          "long": 0,
+          "units": "ft"
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "util",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell",
+          "value": ""
+        },
+        "level": 1,
+        "school": "con",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "atwill",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        }
+      },
+      "sort": 11001,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.dnd5e.spells.IBJmWjzbQGu7M4UX"
+        },
+        "midi-qol": {
+          "onUseMacroName": ""
+        },
+        "autoanimations": {
+          "killAnim": false,
+          "override": false,
+          "animType": "t1",
+          "animName": "",
+          "bards": {
+            "bardAnim": "a1",
+            "bardTarget": true,
+            "bardSelf": true
+          },
+          "spellVar": "a1",
+          "hmAnim": "a1",
+          "color": "n1",
+          "spellOptions": {
+            "spellLoops": 1
+          },
+          "uaStrikeType": "physical",
+          "dtvar": "dt1",
+          "explosion": false,
+          "explodeVariant": "ev1",
+          "explodeColor": "",
+          "explodeRadius": "0",
+          "explodeLoop": "1",
+          "selfRadius": "5",
+          "animTint": "#ffffff",
+          "auraOpacity": 0.75,
+          "ctaOption": false,
+          "teleDist": 30
+        },
+        "favtab": {
+          "isFavorite": false
+        }
+      },
+      "img": "https://assets.forge-vtt.com/bazaar/systems/dnd5e/assets/icons/spells/fog-water-air-2.jpg",
+      "effects": []
+    },
+    {
+      "_id": "cRWLSF2fGmHowEOn",
+      "name": "Grease",
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "<p>AoE on Sorcerer</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 246",
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": 1,
+          "units": "minute"
+        },
+        "target": {
+          "value": 10,
+          "width": null,
+          "units": "ft",
+          "type": "square"
+        },
+        "range": {
+          "value": 60,
+          "long": 0,
+          "units": "ft"
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "save",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "dex",
+          "dc": 13,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "con",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "atwill",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        }
+      },
+      "sort": 11002,
+      "flags": {
+        "dae": {
+          "activeEquipped": false,
+          "alwaysActive": false
+        },
+        "core": {
+          "sourceId": "Compendium.Dynamic-Effects-SRD.DAE SRD Spells.gkehj8Ibf0Hsdmo3"
+        },
+        "midi-qol": {
+          "onUseMacroName": ""
+        },
+        "autoanimations": {
+          "killAnim": false,
+          "override": false,
+          "animType": "t1",
+          "animName": "",
+          "bards": {
+            "bardAnim": "a1",
+            "bardTarget": true,
+            "bardSelf": true
+          },
+          "spellVar": "a1",
+          "hmAnim": "a1",
+          "color": "n1",
+          "spellOptions": {
+            "spellLoops": 1
+          },
+          "uaStrikeType": "physical",
+          "dtvar": "dt1",
+          "explosion": false,
+          "explodeVariant": "ev1",
+          "explodeColor": "",
+          "explodeRadius": "0",
+          "explodeLoop": "1",
+          "selfRadius": "5",
+          "animTint": "#ffffff",
+          "auraOpacity": 0.75,
+          "ctaOption": false,
+          "teleDist": 30
+        },
+        "favtab": {
+          "isFavorite": false
+        }
+      },
+      "img": "https://assets.forge-vtt.com/bazaar/systems/dnd5e/assets/icons/spells/fog-orange-1.jpg",
+      "effects": [
+        {
+          "_id": "EKeituZxAuKkuZm3",
+          "flags": {
+            "core": {
+              "statusId": "combat-utility-belt.prone"
+            },
+            "combat-utility-belt": {
+              "conditionId": "prone",
+              "overlay": false
+            },
+            "dae": {
+              "stackable": false,
+              "specialDuration": "None",
+              "macroRepeat": "none",
+              "transfer": false
+            }
+          },
+          "changes": [],
+          "disabled": false,
+          "duration": {
+            "startTime": null,
+            "seconds": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "icon": "modules/combat-utility-belt/icons/prone.svg",
+          "label": "Prone",
+          "origin": "Actor.o55REou9KUGNV3UM.OwnedItem.mnrUJdhq0nOtjl5n",
+          "tint": "",
+          "transfer": false
+        }
+      ]
+    },
+    {
+      "_id": "7uqgFvIMVGZ7S6ZK",
+      "name": "Invisibility",
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "<p>Target Sorcerer</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 254",
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": 1,
+          "units": "minute"
+        },
+        "target": {
+          "value": 1,
+          "width": null,
+          "units": "",
+          "type": "creature"
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "touch"
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "util",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell",
+          "value": ""
+        },
+        "level": 2,
+        "school": "ill",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "atwill",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        }
+      },
+      "sort": 12001,
+      "flags": {
+        "dynamiceffects": {
+          "equipActive": true,
+          "alwaysActive": false,
+          "effects": [
+            {
+              "modSpecKey": "macro.execute",
+              "value": "Invisibility @target",
+              "mode": "+",
+              "targetSpecific": false,
+              "id": 1,
+              "itemId": "Ca4bXFRcwZU79yGi",
+              "active": true,
+              "_targets": []
+            }
+          ]
+        },
+        "dae": {
+          "activeEquipped": false,
+          "alwaysActive": false
+        },
+        "itemacro": {
+          "macro": {
+            "_data": {
+              "name": "Invisibility",
+              "type": "script",
+              "scope": "global",
+              "command": "//DAE Macro Execute, Effect Value = \"Macro Name\" @target\n\nconst lastArg = args[args.length - 1];\nlet tactor;\nif (lastArg.tokenId) tactor = canvas.tokens.get(lastArg.tokenId).actor;\nelse tactor = game.actors.get(lastArg.actorId);\nconst target = canvas.tokens.get(lastArg.tokenId)\n\n\nif (args[0] === \"on\") {\n    ChatMessage.create({ content: `${target.name} turns invisible` });\n    target.update({ \"hidden\": true });\n}\nif (args[0] === \"off\") {\n    ChatMessage.create({ content: `${target.name} re-appears` });\n    target.update({ \"hidden\": false });\n}",
+              "author": "E4BVikjIkVl2lL2j"
+            },
+            "data": {
+              "name": "Invisibility",
+              "type": "script",
+              "scope": "global",
+              "command": "//DAE Macro Execute, Effect Value = \"Macro Name\" @target\n\nconst lastArg = args[args.length - 1];\nlet tactor;\nif (lastArg.tokenId) tactor = canvas.tokens.get(lastArg.tokenId).actor;\nelse tactor = game.actors.get(lastArg.actorId);\nconst target = canvas.tokens.get(lastArg.tokenId)\n\n\nif (args[0] === \"on\") {\n    ChatMessage.create({ content: `${target.name} turns invisible` });\n    target.update({ \"hidden\": true });\n}\nif (args[0] === \"off\") {\n    ChatMessage.create({ content: `${target.name} re-appears` });\n    target.update({ \"hidden\": false });\n}",
+              "author": "E4BVikjIkVl2lL2j"
+            },
+            "options": {},
+            "apps": {},
+            "compendium": null
+          }
+        },
+        "midi-qol": {
+          "onUseMacroName": ""
+        },
+        "core": {
+          "sourceId": "Compendium.Dynamic-Effects-SRD.DAE SRD Spells.WCMqm6S8NObKCaGU"
+        },
+        "autoanimations": {
+          "killAnim": false,
+          "override": false,
+          "animType": "t1",
+          "animName": "",
+          "color": "n1",
+          "dtvar": "dt1",
+          "explosion": false,
+          "explodeVariant": "ev1",
+          "explodeColor": "",
+          "explodeRadius": "0",
+          "explodeLoop": "1",
+          "bards": {
+            "bardAnim": "a1",
+            "bardTarget": true,
+            "bardSelf": true
+          },
+          "spellVar": "a1",
+          "hmAnim": "a1",
+          "spellOptions": {
+            "spellLoops": 1
+          },
+          "uaStrikeType": "physical",
+          "selfRadius": "5",
+          "animTint": "#ffffff",
+          "auraOpacity": 0.75,
+          "ctaOption": false,
+          "teleDist": 30
+        },
+        "favtab": {
+          "isFavorite": false
+        }
+      },
+      "img": "https://assets.forge-vtt.com/bazaar/systems/dnd5e/assets/icons/spells/fog-sky-2.jpg",
+      "effects": [
+        {
+          "_id": "4sj41iLn03Ucp7Uk",
+          "flags": {
+            "dae": {
+              "transfer": false,
+              "stackable": false,
+              "specialDuration": [],
+              "macroRepeat": "none"
+            }
+          },
+          "changes": [
+            {
+              "key": "macro.itemMacro",
+              "value": "@target",
+              "mode": 0,
+              "priority": 0
+            }
+          ],
+          "disabled": false,
+          "duration": {
+            "startTime": null,
+            "seconds": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "icon": "systems/dnd5e/icons/spells/fog-sky-2.jpg",
+          "label": "Invisibility",
+          "origin": "Actor.o55REou9KUGNV3UM.OwnedItem.fjWZYiu0a7bVCEX9",
+          "tint": "",
+          "transfer": false
+        }
+      ]
+    },
+    {
+      "_id": "X75uCUWXW9n4Ibzl",
+      "name": "Levitate",
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "<p>Target Sorcerer</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 255",
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": 10,
+          "units": "minute"
+        },
+        "target": {
+          "value": 1,
+          "width": null,
+          "units": "",
+          "type": "creature"
+        },
+        "range": {
+          "value": 60,
+          "long": 0,
+          "units": "ft"
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "save",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "con",
+          "dc": 13,
+          "scaling": "spell"
+        },
+        "level": 2,
+        "school": "trs",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "atwill",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        }
+      },
+      "sort": 12002,
+      "flags": {
+        "dynamiceffects": {
+          "equipActive": true,
+          "alwaysActive": false,
+          "effects": [
+            {
+              "modSpecKey": "macro.execute",
+              "value": "Levitate @target",
+              "mode": "+",
+              "targetSpecific": false,
+              "id": 1,
+              "itemId": "EDXeRSF3f6cl2O8L",
+              "active": true,
+              "_targets": []
+            }
+          ]
+        },
+        "dae": {
+          "activeEquipped": false,
+          "alwaysActive": false
+        },
+        "itemacro": {
+          "macro": {
+            "_data": {
+              "name": "Levitate",
+              "type": "script",
+              "scope": "global",
+              "command": "//DAE Macro Execute, Effect Value = \"Macro Name\" @target\nconst lastArg = args[args.length - 1];\nlet tactor;\nif (lastArg.tokenId) tactor = canvas.tokens.get(lastArg.tokenId).actor;\nelse tactor = game.actors.get(lastArg.actorId);\nconst target = canvas.tokens.get(lastArg.tokenId)\n\nif (args[0] === \"on\") {\n    ChatMessage.create({ content: `${target.name} is levitated 20ft` });\n    target.update({ \"elevation\": 20 });\n}\nif (args[0] === \"off\") {\n    target.update({\"elevation\": 0 });\n    ChatMessage.create({ content: `${target.name} is returned to the ground` });\n}",
+              "author": "E4BVikjIkVl2lL2j"
+            },
+            "data": {
+              "name": "Levitate",
+              "type": "script",
+              "scope": "global",
+              "command": "//DAE Macro Execute, Effect Value = \"Macro Name\" @target\nconst lastArg = args[args.length - 1];\nlet tactor;\nif (lastArg.tokenId) tactor = canvas.tokens.get(lastArg.tokenId).actor;\nelse tactor = game.actors.get(lastArg.actorId);\nconst target = canvas.tokens.get(lastArg.tokenId)\n\nif (args[0] === \"on\") {\n    ChatMessage.create({ content: `${target.name} is levitated 20ft` });\n    target.update({ \"elevation\": 20 });\n}\nif (args[0] === \"off\") {\n    target.update({\"elevation\": 0 });\n    ChatMessage.create({ content: `${target.name} is returned to the ground` });\n}",
+              "author": "E4BVikjIkVl2lL2j"
+            },
+            "options": {},
+            "apps": {},
+            "compendium": null
+          }
+        },
+        "midi-qol": {
+          "onUseMacroName": ""
+        },
+        "core": {
+          "sourceId": "Compendium.Dynamic-Effects-SRD.DAE SRD Spells.VNkPZzkfmrVZvJ00"
+        },
+        "autoanimations": {
+          "killAnim": false,
+          "override": false,
+          "animType": "t1",
+          "animName": "",
+          "bards": {
+            "bardAnim": "a1",
+            "bardTarget": true,
+            "bardSelf": true
+          },
+          "spellVar": "a1",
+          "hmAnim": "a1",
+          "color": "n1",
+          "spellOptions": {
+            "spellLoops": 1
+          },
+          "uaStrikeType": "physical",
+          "dtvar": "dt1",
+          "explosion": false,
+          "explodeVariant": "ev1",
+          "explodeColor": "",
+          "explodeRadius": "0",
+          "explodeLoop": "1",
+          "selfRadius": "5",
+          "animTint": "#ffffff",
+          "auraOpacity": 0.75,
+          "ctaOption": false,
+          "teleDist": 30
+        },
+        "favtab": {
+          "isFavorite": false
+        }
+      },
+      "img": "https://assets.forge-vtt.com/bazaar/systems/dnd5e/assets/icons/spells/wind-grasp-magenta-2.jpg",
+      "effects": [
+        {
+          "_id": "6BMAKrzsDsynMYBZ",
+          "flags": {
+            "dae": {
+              "transfer": false,
+              "stackable": false,
+              "specialDuration": [],
+              "macroRepeat": "none"
+            },
+            "ActiveAuras": {
+              "isAura": false,
+              "ignoreSelf": false,
+              "hidden": false,
+              "height": false,
+              "aura": "None",
+              "radius": null
+            }
+          },
+          "changes": [
+            {
+              "key": "macro.itemMacro",
+              "value": "",
+              "mode": 0,
+              "priority": 0
+            }
+          ],
+          "disabled": false,
+          "duration": {
+            "startTime": null,
+            "seconds": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "icon": "systems/dnd5e/icons/spells/wind-grasp-magenta-2.jpg",
+          "label": "Levitate",
+          "origin": "Actor.o55REou9KUGNV3UM.OwnedItem.22fkijcnAtbqhYq8",
+          "tint": "",
+          "transfer": false
+        }
+      ]
+    },
+    {
+      "_id": "YCiZWiFaf8ofOVAZ",
+      "name": "Fireball",
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "<p>AoE on Sorcerer</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 241",
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": "inst"
+        },
+        "target": {
+          "value": 20,
+          "width": null,
+          "units": "ft",
+          "type": "sphere"
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "self"
+        },
+        "uses": {
+          "value": 0,
+          "max": "0",
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "save",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [
+            [
+              "8d6",
+              "fire"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "dex",
+          "dc": 13,
+          "scaling": "spell"
+        },
+        "level": 3,
+        "school": "evo",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "atwill",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        }
+      },
+      "sort": 13001,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.dnd5e.spells.ztgcdrWPshKRpFd0"
+        },
+        "midi-qol": {
+          "onUseMacroName": ""
+        },
+        "autoanimations": {
+          "killAnim": false,
+          "override": false,
+          "animType": "t1",
+          "animName": "",
+          "bards": {
+            "bardAnim": "a1",
+            "bardTarget": true,
+            "bardSelf": true
+          },
+          "spellVar": "a1",
+          "hmAnim": "a1",
+          "color": "n1",
+          "spellOptions": {
+            "spellLoops": 1
+          },
+          "uaStrikeType": "physical",
+          "dtvar": "dt1",
+          "explosion": false,
+          "explodeVariant": "ev1",
+          "explodeColor": "",
+          "explodeRadius": "0",
+          "explodeLoop": "1",
+          "selfRadius": "5",
+          "animTint": "#ffffff",
+          "auraOpacity": 0.75,
+          "ctaOption": false,
+          "teleDist": 30
+        },
+        "favtab": {
+          "isFavorite": false
+        }
+      },
+      "img": "https://assets.forge-vtt.com/bazaar/systems/dnd5e/assets/icons/spells/fireball-red-2.jpg",
+      "effects": []
+    },
+    {
+      "_id": "lVk6jHpQyioXTK9Y",
+      "name": "Fly",
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "<p>Target Random Creature</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 243",
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": 10,
+          "units": "minute"
+        },
+        "target": {
+          "value": 1,
+          "width": null,
+          "units": "",
+          "type": "creature"
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "touch"
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "util",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell",
+          "value": ""
+        },
+        "level": 3,
+        "school": "trs",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "atwill",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        }
+      },
+      "sort": 13002,
+      "flags": {
+        "dynamiceffects": {
+          "equipActive": true,
+          "alwaysActive": false,
+          "effects": [
+            {
+              "modSpecKey": "data.attributes.speed.special",
+              "value": "60ft Fly",
+              "mode": "+",
+              "targetSpecific": false,
+              "id": 1,
+              "itemId": "BE3x0mPPgMviE9GR",
+              "active": true,
+              "_targets": []
+            }
+          ]
+        },
+        "dae": {
+          "activeEquipped": false,
+          "alwaysActive": false
+        },
+        "core": {
+          "sourceId": "Item.j9p6foCgoUumzm8F"
+        },
+        "midi-qol": {
+          "onUseMacroName": ""
+        },
+        "autoanimations": {
+          "killAnim": false,
+          "override": false,
+          "animType": "t1",
+          "animName": "",
+          "bards": {
+            "bardAnim": "a1",
+            "bardTarget": true,
+            "bardSelf": true
+          },
+          "spellVar": "a1",
+          "hmAnim": "a1",
+          "color": "n1",
+          "spellOptions": {
+            "spellLoops": 1
+          },
+          "uaStrikeType": "physical",
+          "dtvar": "dt1",
+          "explosion": false,
+          "explodeVariant": "ev1",
+          "explodeColor": "",
+          "explodeRadius": "0",
+          "explodeLoop": "1",
+          "selfRadius": "5",
+          "animTint": "#ffffff",
+          "auraOpacity": 0.75,
+          "ctaOption": false,
+          "teleDist": 30
+        },
+        "favtab": {
+          "isFavorite": false
+        }
+      },
+      "img": "https://assets.forge-vtt.com/bazaar/systems/dnd5e/assets/icons/spells/link-spirit-1.jpg",
+      "effects": [
+        {
+          "_id": "VVu9uaQR0UaAvbBr",
+          "flags": {
+            "dae": {
+              "transfer": false,
+              "stackable": false
+            }
+          },
+          "changes": [
+            {
+              "key": "data.attributes.movement.fly",
+              "value": 60,
+              "mode": 4,
+              "priority": 20
+            }
+          ],
+          "disabled": false,
+          "duration": {
+            "startTime": null,
+            "seconds": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "icon": "systems/dnd5e/icons/spells/link-spirit-1.jpg",
+          "label": "Fly",
+          "origin": "Actor.o55REou9KUGNV3UM.OwnedItem.UJC6J6rWqEhpxihK",
+          "tint": "",
+          "transfer": false
+        }
+      ]
+    },
+    {
+      "_id": "B9oddnUVRNWt6hWr",
+      "name": "Confusion",
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "<p>AoE on Sorcerer</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 224",
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": 1,
+          "units": "minute"
+        },
+        "target": {
+          "value": 10,
+          "width": null,
+          "units": "ft",
+          "type": "sphere"
+        },
+        "range": {
+          "value": 90,
+          "long": 0,
+          "units": "ft"
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "save",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "1d10",
+        "save": {
+          "ability": "wis",
+          "dc": 13,
+          "scaling": "spell"
+        },
+        "level": 4,
+        "school": "enc",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "atwill",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        }
+      },
+      "sort": 14001,
+      "flags": {
+        "itemacro": {
+          "macro": {
+            "_data": {
+              "name": "Confusion",
+              "type": "script",
+              "scope": "global",
+              "command": "//DAE Macro Execute, Effect Value = \"Macro Name\" @target @attributes.spelldc\n\nconst lastArg = args[args.length - 1];\nlet tactor;\nif (lastArg.tokenId) tactor = canvas.tokens.get(lastArg.tokenId).actor;\nelse tactor = game.actors.get(lastArg.actorId);\n\nconst DAEItem = lastArg.efData.flags.dae.itemData\nconst saveData = DAEItem.data.save\n\nif (args[0] === \"each\") {\n\n        let confusionRoll = new Roll(\"1d10\").roll().total;\n        let content;\n        switch (confusionRoll) {\n            case 1:\n                content = \"The creature uses all its movement to move in a random direction. To determine the direction, roll a  [[d8]] and assign a direction to each die face. The creature doesn't take an action this turn.\";\n                break;\n            case 2:\n                content = \"\tThe creature doesn't move or take actions this turn.\";\n                break;\n            case 3:\n            case 4:\n            case 5:\n            case 6:\n            case 7:\n                content = \"The creature uses its action to make a melee attack against a randomly determined creature within its reach. If there is no creature within its reach, the creature does nothing this turn.\";\n                break;\n            case 8:\n            case 9:\n            case 10:\n                content = \"The creature can act and move normally.\";\n                break;\n        }\n        ChatMessage.create({ content: `Confusion roll for ${tactor.name} is ${confusionRoll}: ` + content });\n\n        const flavor = `${CONFIG.DND5E.abilities[saveData.ability]} DC${saveData.dc} ${DAEItem?.name || \"\"}`;\n        let saveRoll = (await tactor.rollAbilitySave(saveData.ability, { flavor })).total;\n\n    if(saveRoll >= DC) {\n        ChatMessage.create({ content: `Confusion ends for ${tactor.name} at the end of their turn`})\n        tactor.deleteEmbeddedEntity(\"ActiveEffect\", lastArg.effectId); \n    }\n\n}",
+              "author": "E4BVikjIkVl2lL2j"
+            },
+            "data": {
+              "name": "Confusion",
+              "type": "script",
+              "scope": "global",
+              "command": "//DAE Macro Execute, Effect Value = \"Macro Name\" @target @attributes.spelldc\n\nconst lastArg = args[args.length - 1];\nlet tactor;\nif (lastArg.tokenId) tactor = canvas.tokens.get(lastArg.tokenId).actor;\nelse tactor = game.actors.get(lastArg.actorId);\n\nconst DAEItem = lastArg.efData.flags.dae.itemData\nconst saveData = DAEItem.data.save\n\nif (args[0] === \"each\") {\n\n        let confusionRoll = new Roll(\"1d10\").roll().total;\n        let content;\n        switch (confusionRoll) {\n            case 1:\n                content = \"The creature uses all its movement to move in a random direction. To determine the direction, roll a  [[d8]] and assign a direction to each die face. The creature doesn't take an action this turn.\";\n                break;\n            case 2:\n                content = \"\tThe creature doesn't move or take actions this turn.\";\n                break;\n            case 3:\n            case 4:\n            case 5:\n            case 6:\n            case 7:\n                content = \"The creature uses its action to make a melee attack against a randomly determined creature within its reach. If there is no creature within its reach, the creature does nothing this turn.\";\n                break;\n            case 8:\n            case 9:\n            case 10:\n                content = \"The creature can act and move normally.\";\n                break;\n        }\n        ChatMessage.create({ content: `Confusion roll for ${tactor.name} is ${confusionRoll}: ` + content });\n\n        const flavor = `${CONFIG.DND5E.abilities[saveData.ability]} DC${saveData.dc} ${DAEItem?.name || \"\"}`;\n        let saveRoll = (await tactor.rollAbilitySave(saveData.ability, { flavor })).total;\n\n    if(saveRoll >= DC) {\n        ChatMessage.create({ content: `Confusion ends for ${tactor.name} at the end of their turn`})\n        tactor.deleteEmbeddedEntity(\"ActiveEffect\", lastArg.effectId); \n    }\n\n}",
+              "author": "E4BVikjIkVl2lL2j"
+            },
+            "options": {},
+            "apps": {},
+            "compendium": null
+          }
+        },
+        "dae": {
+          "activeEquipped": false,
+          "alwaysActive": false
+        },
+        "core": {
+          "sourceId": "Compendium.Dynamic-Effects-SRD.DAE SRD Spells.MhbRwMn9laXsmL5d"
+        },
+        "autoanimations": {
+          "killAnim": false,
+          "override": false,
+          "animType": "t1",
+          "animName": "",
+          "color": "n1",
+          "dtvar": "dt1",
+          "explosion": false,
+          "explodeVariant": "ev1",
+          "explodeColor": "",
+          "explodeRadius": "0",
+          "explodeLoop": "1",
+          "bards": {
+            "bardAnim": "a1",
+            "bardTarget": true,
+            "bardSelf": true
+          },
+          "spellVar": "a1",
+          "hmAnim": "a1",
+          "spellOptions": {
+            "spellLoops": 1
+          },
+          "uaStrikeType": "physical",
+          "selfRadius": "5",
+          "animTint": "#ffffff",
+          "auraOpacity": 0.75,
+          "ctaOption": false,
+          "teleDist": 30
+        },
+        "midi-qol": {
+          "onUseMacroName": ""
+        },
+        "favtab": {
+          "isFavorite": false
+        }
+      },
+      "img": "https://assets.forge-vtt.com/bazaar/systems/dnd5e/assets/icons/spells/wind-magenta-3.jpg",
+      "effects": [
+        {
+          "_id": "KVLW7oq1VcRL8DCt",
+          "flags": {
+            "dae": {
+              "stackable": false,
+              "specialDuration": [
+                "None"
+              ],
+              "transfer": false,
+              "macroRepeat": "startEveryTurn"
+            },
+            "ActiveAuras": {
+              "isAura": false,
+              "ignoreSelf": false,
+              "hidden": false,
+              "height": false,
+              "aura": "None",
+              "radius": null
+            }
+          },
+          "changes": [
+            {
+              "key": "macro.itemMacro",
+              "value": "",
+              "mode": 0,
+              "priority": 20
+            }
+          ],
+          "disabled": false,
+          "duration": {
+            "startTime": null,
+            "seconds": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "icon": "systems/dnd5e/icons/spells/wind-magenta-3.jpg",
+          "label": "Confusion",
+          "origin": "Actor.o55REou9KUGNV3UM.OwnedItem.yAA8sZaMV43YjfEQ",
+          "tint": "",
+          "transfer": false
+        }
+      ]
+    },
+    {
+      "_id": "kxZLA2KHUdie3LgM",
+      "name": "Polymorph",
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "<p>Target Sorcerer, turn into sheep</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 266",
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": 1,
+          "units": "hour"
+        },
+        "target": {
+          "value": 1,
+          "width": null,
+          "units": "",
+          "type": "creature"
+        },
+        "range": {
+          "value": 60,
+          "long": 0,
+          "units": "ft"
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "save",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "wis",
+          "dc": 13,
+          "scaling": "spell"
+        },
+        "level": 4,
+        "school": "trs",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "atwill",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        }
+      },
+      "sort": 14002,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.dnd5e.spells.04nMsTWkIFvkbXlY"
+        },
+        "midi-qol": {
+          "onUseMacroName": ""
+        },
+        "autoanimations": {
+          "killAnim": false,
+          "override": false,
+          "animType": "t1",
+          "animName": "",
+          "bards": {
+            "bardAnim": "a1",
+            "bardTarget": true,
+            "bardSelf": true
+          },
+          "spellVar": "a1",
+          "hmAnim": "a1",
+          "color": "n1",
+          "spellOptions": {
+            "spellLoops": 1
+          },
+          "uaStrikeType": "physical",
+          "dtvar": "dt1",
+          "explosion": false,
+          "explodeVariant": "ev1",
+          "explodeColor": "",
+          "explodeRadius": "0",
+          "explodeLoop": "1",
+          "selfRadius": "5",
+          "animTint": "#ffffff",
+          "auraOpacity": 0.75,
+          "ctaOption": false,
+          "teleDist": 30
+        },
+        "favtab": {
+          "isFavorite": false
+        }
+      },
+      "img": "https://assets.forge-vtt.com/bazaar/systems/dnd5e/assets/icons/spells/link-eerie-2.jpg",
+      "effects": []
+    },
+    {
+      "_id": "FcGa1iuDySTm1nDv",
+      "name": "Magic Missile",
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "<p>Choose Targets</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 257",
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": "inst"
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": "creature"
+        },
+        "range": {
+          "value": 120,
+          "long": 0,
+          "units": "ft"
+        },
+        "uses": {
+          "value": 0,
+          "max": "0",
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "other",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell",
+          "value": ""
+        },
+        "level": 5,
+        "school": "evo",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "atwill",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        }
+      },
+      "sort": 15001,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.dnd5e.spells.41JIhpDyM9Anm7cs"
+        },
+        "autoanimations": {
+          "killAnim": false,
+          "override": false,
+          "animType": "t1",
+          "animName": "",
+          "color": "a1",
+          "dtvar": "dt1",
+          "explosion": false,
+          "explodeVariant": "ev1",
+          "explodeColor": "",
+          "explodeRadius": "0",
+          "explodeLoop": "1",
+          "bards": {
+            "bardAnim": "a1",
+            "bardTarget": true,
+            "bardSelf": true
+          },
+          "spellVar": "a1",
+          "hmAnim": "a1",
+          "spellOptions": {
+            "spellLoops": 1
+          },
+          "uaStrikeType": "physical",
+          "selfRadius": "5",
+          "animTint": "#ffffff",
+          "auraOpacity": 0.75,
+          "ctaOption": false,
+          "teleDist": 30
+        },
+        "midi-qol": {
+          "onUseMacroName": "ItemMacro"
+        },
+        "itemacro": {
+          "macro": {
+            "_data": {
+              "name": "Magic Missile",
+              "type": "script",
+              "scope": "global",
+              "command": "// Item macro, Midi-qol On Use. This handles damage, so remove it from the spell card.\n// Based on macros from Crymic and Caewok\n// https://gitlab.com/crymic/foundry-vtt-macros/-/blob/master/5e/Spells/Level%201/Magic%20Missile.js\n// https://github.com/caewok/Foundry-Macros/blob/main/spells/Level%201/Magic%20Missile/RandomMagicMissileAnimation.js\n// This version rolls damage for each missile.\n// Make sure that target is not set to 1 on the spell details\n\n(async()=>{\n    async function wait(ms) {\n    return new Promise(resolve => {\n        setTimeout(resolve, ms);\n    });\n    }\n\n    function isEmpty(str) {\n        const is_empty = (!str || /^\\s*$/.test(str));\n        //console.log(\"isEmpty? \" + is_empty);\n        return is_empty;\n    }\n\n    async function MagicMissilesAnimation(args1, args2, args3) {\n        console.log(\"JB2A RandomMagicMissile|args\", args1, args2, args3);\n\n        const the_caster = canvas.tokens.get(args1);\n        const the_target = canvas.tokens.get(args2);\n        const color = args3 ?? \"Blue\";\n\n        if (!canvas.fxmaster) ui.notifications.error(\"This macro depends on the FXMaster module. Make sure it is installed and enabled\");\n\n        const file = \"modules/jb2a_patreon/Library/1st_Level/Magic_Missile/\";\n        const mmA = `${file}MagicMissile_01_Regular_${color}_30ft_01_1600x400.webm`;\n        const mmB = `${file}MagicMissile_01_Regular_${color}_30ft_02_1600x400.webm`;\n        const mmC = `${file}MagicMissile_01_Regular_${color}_30ft_03_1600x400.webm`;\n        const mmD = `${file}MagicMissile_01_Regular_${color}_30ft_04_1600x400.webm`;\n        const mmE = `${file}MagicMissile_01_Regular_${color}_30ft_05_1600x400.webm`;\n        const mmF = `${file}MagicMissile_01_Regular_${color}_30ft_06_1600x400.webm`;\n        const mmG = `${file}MagicMissile_01_Regular_${color}_30ft_07_1600x400.webm`;\n        const mmH = `${file}MagicMissile_01_Regular_${color}_30ft_08_1600x400.webm`;\n        const mmI = `${file}MagicMissile_01_Regular_${color}_30ft_09_1600x400.webm`;\n\n        const mmAA = `${file}MagicMissile_01_Regular_${color}_60ft_01_2800x400.webm`;\n        const mmBB = `${file}MagicMissile_01_Regular_${color}_60ft_02_2800x400.webm`;\n        const mmCC = `${file}MagicMissile_01_Regular_${color}_60ft_03_2800x400.webm`;\n        const mmDD = `${file}MagicMissile_01_Regular_${color}_60ft_04_2800x400.webm`;\n        const mmEE = `${file}MagicMissile_01_Regular_${color}_60ft_05_2800x400.webm`;\n        const mmFF = `${file}MagicMissile_01_Regular_${color}_60ft_06_2800x400.webm`;\n        const mmGG = `${file}MagicMissile_01_Regular_${color}_60ft_07_2800x400.webm`;\n        const mmHH = `${file}MagicMissile_01_Regular_${color}_60ft_08_2800x400.webm`;\n        const mmII = `${file}MagicMissile_01_Regular_${color}_60ft_09_2800x400.webm`;\n\n        function random_item(items) {\n        return(items[Math.floor(Math.random()*items.length)]);\n        }\n\n        const itemsA = [mmA, mmB, mmC, mmD, mmE, mmF, mmG, mmH, mmI];\n        const itemsB = [mmAA, mmBB, mmCC, mmDD, mmEE, mmFF, mmGG, mmHH, mmII];\n        const sleepNow = (delay) => new Promise((resolve) => setTimeout(resolve, delay))\n\n        async function Cast() {\n            let ray = new Ray(the_caster.center, the_target.center);\n            let anDeg = -(ray.angle * 57.3);\n            let anDist = ray.distance;\n\n        // not using these; just placeholders\n            let anFile = random_item(itemsA);\n            let anFileSize = 600;\n            let anchorX = 0.125;\n            \n            // set based on distance\n            switch(true){\n            case (anDist<=1800):\n                    anFileSize = 1200;\n                    anFile = random_item(itemsA);\n                    anchorX = 0.125;\n                    break;\n            default:\n                    anFileSize = 2400;\n                    anFile = random_item(itemsB);\n                    anchorX = 0.071;\n                    break;\n            }\n\n            let anScale = anDist / anFileSize;\n            let anScaleY = anScale;\n            if (anDist<=600){anScaleY = 0.6}\n            if (anDist>=700 && anDist <=1200){anScaleY = 0.8}\n            if (anDist>=1300 && anDist <=1800){anScaleY = 0.6}\n            if (anDist>=1900){anScaleY = anScale}\n\n            let spellAnim = \n            {\n                file: anFile,\n                position: the_caster.center,\n                anchor: {\n                    x: anchorX,\n                    y: 0.5\n                },\n                angle: anDeg,\n                scale: {\n                    x: anScale,\n                    y: anScaleY\n                }\n            }; \n\n            canvas.fxmaster.playVideo(spellAnim);\n            await sleepNow(80);\n            game.socket.emit('module.fxmaster', spellAnim);\n            await sleepNow(50);\n        }\n\n        Cast ()\n    }\n\n    const COLOR = \"Blue\";\n        \n    const actorD = game.actors.get(args[0].actor._id);\n    const tokenD = canvas.tokens.get(args[0].tokenId);\n    let level = 2 + Number(args[0].spellLevel);\n    if (args[0].targets.length === 1){\n        let target = canvas.tokens.get(args[0].targets[0]._id);\n        let damageRoll = new Roll(`(${level}d4 +${level})`).roll();\n        game.dice3d?.showForRoll(damageRoll);\n        new MidiQOL.DamageOnlyWorkflow(actorD, tokenD, damageRoll.total, \"force\", [target], damageRoll, {itemCardId: args[0].itemCardId});\n        let damage_target = `<div class=\"midi-qol-flex-container\"><div>hits</div><div class=\"midi-qol-target-npc midi-qol-target-name\" id=\"${target.id}\"> ${target.name}</div><div><img src=\"${target.data.img}\" width=\"30\" height=\"30\" style=\"border:0px\"></div></div>`;\n        await wait(1000);\n\n        let damage_results = `<div><div class=\"midi-qol-nobox\">${damage_target}</div></div>`;\n\n        const chatMessage = await game.messages.get(args[0].itemCardId);\n        let content = await duplicate(chatMessage.data.content);\n\n        const searchString =  /<div class=\"midi-qol-hits-display\">[\\s\\S]*<div class=\"end-midi-qol-hits-display\">/g;\n        const replaceString = `<div class=\"midi-qol-hits-display\"><div class=\"end-midi-qol-hits-display\">${damage_results}`;\n\n        content = await content.replace(searchString, replaceString);\n        await chatMessage.update({ content: content });\n        \n        for(let i = 0; i < level; i++) {\n            await MagicMissilesAnimation(args[0].tokenId, args[0].targets[0]._id, COLOR);\n        }\n    }\n    if (args[0].targets.length > 1){\n        let targetList = \"\";\n        let all_targets = args[0].targets;\n\n        for (let target of all_targets) {\n            targetList += `<tr><td>${target.name}</td><td><input type=\"number\" id=\"target\" min=\"0\" max=\"${level}\" name=\"${target._id}\"></td></tr>`;\n        }\n        let the_content = `<p>You have currently <b>${level}</b> total Magic Missle bolts.</p><form class=\"flexcol\"><table width=\"100%\"><tbody><tr><th>Target</th><th>Number Bolts</th></tr>${targetList}</tbody></table></form>`;\n        new Dialog({\n            title: \"Magic Missle Damage\",\n            content: the_content,\n            buttons: {\n                one: {\n                    label: \"Damage\", callback: async (html) => {\n                        let spentTotal = 0;\n                        let selected_targets = html.find('input#target');\n                        for(let get_total of selected_targets){\n                            spentTotal += Number(get_total.value);\n                        }\n                        if (spentTotal > level) return ui.notifications.error(`The spell fails, You assigned more bolts then you have.`);\n                        let damage_target = [];\n                        let allDamageRolls = [];\n\n                        for (let selected_target of selected_targets) {\n                            let damageNum = selected_target.value;\n                            if (!isEmpty(damageNum)) {\n                                let damageRoll = new Roll(`${damageNum}d4 +${damageNum}`).roll();\n                                game.dice3d?.showForRoll(damageRoll);\n\n                                let target_id = selected_target.name;\n                                let get_target = canvas.tokens.get(target_id);\n\n                                new MidiQOL.DamageOnlyWorkflow(actorD, tokenD, damageRoll.total, \"force\", [get_target], damageRoll, { itemCardId: args[0].itemCardId });\n\n                                let damageRoll_Render = await damageRoll.render();\n                                allDamageRolls.push(damageRoll_Render);\n\n                                damage_target.push(`<div class=\"midi-qol-flex-container\"><div>hits</div><div class=\"midi-qol-target-npc midi-qol-target-name\" id=\"${get_target.id}\"> ${get_target.name}</div><div><img src=\"${get_target.data.img}\" width=\"30\" height=\"30\" style=\"border:0px\"></div><div> for ${damageRoll.total} damage</div></div>`);\n\n                                for(let i = 0; i < damageNum; i++) {\n\t\t\t\t\t\t\t\t\tawait MagicMissilesAnimation(args[0].tokenId, target_id, COLOR);\n\t\t\t\t\t\t\t\t}\n                            }\n                        }\n                        let damage_list = damage_target.join('');\n                        await wait(1000);\n                        let damage_results = `<div><div class=\"midi-qol-nobox\">${damage_list}</div></div>`;\n                        let chatMessage = await game.messages.get(args[0].itemCardId);\n                        let content = await duplicate(chatMessage.data.content);\n                        const searchString =  /<div class=\"midi-qol-hits-display\">[\\s\\S]*<div class=\"end-midi-qol-hits-display\">/g;\n                        const replaceString = `<div class=\"midi-qol-hits-display\"><div class=\"end-midi-qol-hits-display\">${damage_results}`;\n                        content = await content.replace(searchString, replaceString);\n\n                        let damage_rolls = allDamageRolls.join('<div style=\"text-align:center\">(Force)</div>');\n                        const rollSearchString = /<div class=\"midi-qol-other-roll\">[\\s\\S]*<div class=\"end-midi-qol-other-roll\">/g;\n                        const rollReplaceString = `<div class=\"midi-qol-other-roll\"><div style=\"text-align:center\">(Force)</div>${damage_rolls}<div class=\"end-midi-qol-other-roll\">`;\n                        content = await content.replace(rollSearchString, rollReplaceString);\n\n                        await chatMessage.update({ content: content });\n                    }\n                }\n            }\n        }).render(true);\n    }\n})();",
+              "author": "uCKWiEX4wbMXvNRA"
+            },
+            "data": {
+              "name": "Magic Missile",
+              "type": "script",
+              "scope": "global",
+              "command": "// Item macro, Midi-qol On Use. This handles damage, so remove it from the spell card.\n// Based on macros from Crymic and Caewok\n// https://gitlab.com/crymic/foundry-vtt-macros/-/blob/master/5e/Spells/Level%201/Magic%20Missile.js\n// https://github.com/caewok/Foundry-Macros/blob/main/spells/Level%201/Magic%20Missile/RandomMagicMissileAnimation.js\n// This version rolls damage for each missile.\n// Make sure that target is not set to 1 on the spell details\n\n(async()=>{\n    async function wait(ms) {\n    return new Promise(resolve => {\n        setTimeout(resolve, ms);\n    });\n    }\n\n    function isEmpty(str) {\n        const is_empty = (!str || /^\\s*$/.test(str));\n        //console.log(\"isEmpty? \" + is_empty);\n        return is_empty;\n    }\n\n    async function MagicMissilesAnimation(args1, args2, args3) {\n        console.log(\"JB2A RandomMagicMissile|args\", args1, args2, args3);\n\n        const the_caster = canvas.tokens.get(args1);\n        const the_target = canvas.tokens.get(args2);\n        const color = args3 ?? \"Blue\";\n\n        if (!canvas.fxmaster) ui.notifications.error(\"This macro depends on the FXMaster module. Make sure it is installed and enabled\");\n\n        const file = \"modules/jb2a_patreon/Library/1st_Level/Magic_Missile/\";\n        const mmA = `${file}MagicMissile_01_Regular_${color}_30ft_01_1600x400.webm`;\n        const mmB = `${file}MagicMissile_01_Regular_${color}_30ft_02_1600x400.webm`;\n        const mmC = `${file}MagicMissile_01_Regular_${color}_30ft_03_1600x400.webm`;\n        const mmD = `${file}MagicMissile_01_Regular_${color}_30ft_04_1600x400.webm`;\n        const mmE = `${file}MagicMissile_01_Regular_${color}_30ft_05_1600x400.webm`;\n        const mmF = `${file}MagicMissile_01_Regular_${color}_30ft_06_1600x400.webm`;\n        const mmG = `${file}MagicMissile_01_Regular_${color}_30ft_07_1600x400.webm`;\n        const mmH = `${file}MagicMissile_01_Regular_${color}_30ft_08_1600x400.webm`;\n        const mmI = `${file}MagicMissile_01_Regular_${color}_30ft_09_1600x400.webm`;\n\n        const mmAA = `${file}MagicMissile_01_Regular_${color}_60ft_01_2800x400.webm`;\n        const mmBB = `${file}MagicMissile_01_Regular_${color}_60ft_02_2800x400.webm`;\n        const mmCC = `${file}MagicMissile_01_Regular_${color}_60ft_03_2800x400.webm`;\n        const mmDD = `${file}MagicMissile_01_Regular_${color}_60ft_04_2800x400.webm`;\n        const mmEE = `${file}MagicMissile_01_Regular_${color}_60ft_05_2800x400.webm`;\n        const mmFF = `${file}MagicMissile_01_Regular_${color}_60ft_06_2800x400.webm`;\n        const mmGG = `${file}MagicMissile_01_Regular_${color}_60ft_07_2800x400.webm`;\n        const mmHH = `${file}MagicMissile_01_Regular_${color}_60ft_08_2800x400.webm`;\n        const mmII = `${file}MagicMissile_01_Regular_${color}_60ft_09_2800x400.webm`;\n\n        function random_item(items) {\n        return(items[Math.floor(Math.random()*items.length)]);\n        }\n\n        const itemsA = [mmA, mmB, mmC, mmD, mmE, mmF, mmG, mmH, mmI];\n        const itemsB = [mmAA, mmBB, mmCC, mmDD, mmEE, mmFF, mmGG, mmHH, mmII];\n        const sleepNow = (delay) => new Promise((resolve) => setTimeout(resolve, delay))\n\n        async function Cast() {\n            let ray = new Ray(the_caster.center, the_target.center);\n            let anDeg = -(ray.angle * 57.3);\n            let anDist = ray.distance;\n\n        // not using these; just placeholders\n            let anFile = random_item(itemsA);\n            let anFileSize = 600;\n            let anchorX = 0.125;\n            \n            // set based on distance\n            switch(true){\n            case (anDist<=1800):\n                    anFileSize = 1200;\n                    anFile = random_item(itemsA);\n                    anchorX = 0.125;\n                    break;\n            default:\n                    anFileSize = 2400;\n                    anFile = random_item(itemsB);\n                    anchorX = 0.071;\n                    break;\n            }\n\n            let anScale = anDist / anFileSize;\n            let anScaleY = anScale;\n            if (anDist<=600){anScaleY = 0.6}\n            if (anDist>=700 && anDist <=1200){anScaleY = 0.8}\n            if (anDist>=1300 && anDist <=1800){anScaleY = 0.6}\n            if (anDist>=1900){anScaleY = anScale}\n\n            let spellAnim = \n            {\n                file: anFile,\n                position: the_caster.center,\n                anchor: {\n                    x: anchorX,\n                    y: 0.5\n                },\n                angle: anDeg,\n                scale: {\n                    x: anScale,\n                    y: anScaleY\n                }\n            }; \n\n            canvas.fxmaster.playVideo(spellAnim);\n            await sleepNow(80);\n            game.socket.emit('module.fxmaster', spellAnim);\n            await sleepNow(50);\n        }\n\n        Cast ()\n    }\n\n    const COLOR = \"Blue\";\n        \n    const actorD = game.actors.get(args[0].actor._id);\n    const tokenD = canvas.tokens.get(args[0].tokenId);\n    let level = 2 + Number(args[0].spellLevel);\n    if (args[0].targets.length === 1){\n        let target = canvas.tokens.get(args[0].targets[0]._id);\n        let damageRoll = new Roll(`(${level}d4 +${level})`).roll();\n        game.dice3d?.showForRoll(damageRoll);\n        new MidiQOL.DamageOnlyWorkflow(actorD, tokenD, damageRoll.total, \"force\", [target], damageRoll, {itemCardId: args[0].itemCardId});\n        let damage_target = `<div class=\"midi-qol-flex-container\"><div>hits</div><div class=\"midi-qol-target-npc midi-qol-target-name\" id=\"${target.id}\"> ${target.name}</div><div><img src=\"${target.data.img}\" width=\"30\" height=\"30\" style=\"border:0px\"></div></div>`;\n        await wait(1000);\n\n        let damage_results = `<div><div class=\"midi-qol-nobox\">${damage_target}</div></div>`;\n\n        const chatMessage = await game.messages.get(args[0].itemCardId);\n        let content = await duplicate(chatMessage.data.content);\n\n        const searchString =  /<div class=\"midi-qol-hits-display\">[\\s\\S]*<div class=\"end-midi-qol-hits-display\">/g;\n        const replaceString = `<div class=\"midi-qol-hits-display\"><div class=\"end-midi-qol-hits-display\">${damage_results}`;\n\n        content = await content.replace(searchString, replaceString);\n        await chatMessage.update({ content: content });\n        \n        for(let i = 0; i < level; i++) {\n            await MagicMissilesAnimation(args[0].tokenId, args[0].targets[0]._id, COLOR);\n        }\n    }\n    if (args[0].targets.length > 1){\n        let targetList = \"\";\n        let all_targets = args[0].targets;\n\n        for (let target of all_targets) {\n            targetList += `<tr><td>${target.name}</td><td><input type=\"number\" id=\"target\" min=\"0\" max=\"${level}\" name=\"${target._id}\"></td></tr>`;\n        }\n        let the_content = `<p>You have currently <b>${level}</b> total Magic Missle bolts.</p><form class=\"flexcol\"><table width=\"100%\"><tbody><tr><th>Target</th><th>Number Bolts</th></tr>${targetList}</tbody></table></form>`;\n        new Dialog({\n            title: \"Magic Missle Damage\",\n            content: the_content,\n            buttons: {\n                one: {\n                    label: \"Damage\", callback: async (html) => {\n                        let spentTotal = 0;\n                        let selected_targets = html.find('input#target');\n                        for(let get_total of selected_targets){\n                            spentTotal += Number(get_total.value);\n                        }\n                        if (spentTotal > level) return ui.notifications.error(`The spell fails, You assigned more bolts then you have.`);\n                        let damage_target = [];\n                        let allDamageRolls = [];\n\n                        for (let selected_target of selected_targets) {\n                            let damageNum = selected_target.value;\n                            if (!isEmpty(damageNum)) {\n                                let damageRoll = new Roll(`${damageNum}d4 +${damageNum}`).roll();\n                                game.dice3d?.showForRoll(damageRoll);\n\n                                let target_id = selected_target.name;\n                                let get_target = canvas.tokens.get(target_id);\n\n                                new MidiQOL.DamageOnlyWorkflow(actorD, tokenD, damageRoll.total, \"force\", [get_target], damageRoll, { itemCardId: args[0].itemCardId });\n\n                                let damageRoll_Render = await damageRoll.render();\n                                allDamageRolls.push(damageRoll_Render);\n\n                                damage_target.push(`<div class=\"midi-qol-flex-container\"><div>hits</div><div class=\"midi-qol-target-npc midi-qol-target-name\" id=\"${get_target.id}\"> ${get_target.name}</div><div><img src=\"${get_target.data.img}\" width=\"30\" height=\"30\" style=\"border:0px\"></div><div> for ${damageRoll.total} damage</div></div>`);\n\n                                for(let i = 0; i < damageNum; i++) {\n\t\t\t\t\t\t\t\t\tawait MagicMissilesAnimation(args[0].tokenId, target_id, COLOR);\n\t\t\t\t\t\t\t\t}\n                            }\n                        }\n                        let damage_list = damage_target.join('');\n                        await wait(1000);\n                        let damage_results = `<div><div class=\"midi-qol-nobox\">${damage_list}</div></div>`;\n                        let chatMessage = await game.messages.get(args[0].itemCardId);\n                        let content = await duplicate(chatMessage.data.content);\n                        const searchString =  /<div class=\"midi-qol-hits-display\">[\\s\\S]*<div class=\"end-midi-qol-hits-display\">/g;\n                        const replaceString = `<div class=\"midi-qol-hits-display\"><div class=\"end-midi-qol-hits-display\">${damage_results}`;\n                        content = await content.replace(searchString, replaceString);\n\n                        let damage_rolls = allDamageRolls.join('<div style=\"text-align:center\">(Force)</div>');\n                        const rollSearchString = /<div class=\"midi-qol-other-roll\">[\\s\\S]*<div class=\"end-midi-qol-other-roll\">/g;\n                        const rollReplaceString = `<div class=\"midi-qol-other-roll\"><div style=\"text-align:center\">(Force)</div>${damage_rolls}<div class=\"end-midi-qol-other-roll\">`;\n                        content = await content.replace(rollSearchString, rollReplaceString);\n\n                        await chatMessage.update({ content: content });\n                    }\n                }\n            }\n        }).render(true);\n    }\n})();",
+              "author": "uCKWiEX4wbMXvNRA"
+            },
+            "options": {},
+            "apps": {},
+            "compendium": null
+          }
+        },
+        "favtab": {
+          "isFavorite": false
+        }
+      },
+      "img": "https://assets.forge-vtt.com/bazaar/systems/dnd5e/assets/icons/spells/fire-arrows-magenta-1.jpg",
+      "effects": []
+    },
+    {
+      "_id": "zzKWlTB0cWKGDpur",
+      "name": "Sorcerer",
+      "type": "class",
+      "data": {
+        "description": {
+          "value": "<p>As a sorcerer, you gain the following class features.</p>\n<h3>Hit Points</h3>\n<p><strong>Hit Dice:</strong> 1d6 per sorcerer level<br><strong>Hit Points at 1st Level:</strong> 6 + your Constitution modifier<br><strong>Hit Points at Higher Levels:</strong> 1d6 (or 4) + your Constitution modifier per sorcerer level after 1st</p>\n<h3>Proficiencies</h3>\n<p><strong>Armor:</strong> None<br><strong>Weapons:</strong> Daggers, darts, slings, quarterstaffs, light crossbows<br><strong>Tools:</strong> None<br><strong>Saving Throws:</strong> Constitution, Charisma<br><strong>Skills:</strong> Choose two from Arcana, Deception, Insight, Intimidation, Persuasion, and Religion</p>\n<h3>Equipment</h3>\n<p>You start with the following equipment, in addition to the equipment granted by your background:</p>\n<ul>\n<li>(a) a light crossbow and 20 bolts or (b) any simple weapon</li>\n<li>(a) a component pouch or (b) an arcane focus</li>\n<li>(a) a dungeoneer’s pack or (b) an explorer’s pack</li>\n<li>Two daggers</li>\n</ul>\n<h1>Sorcerer Advancement</h1>\n<table>\n<thead>\n<tr>\n<td>Level</td>\n<td>Proficiency Bonus</td>\n<td>Sorcery Points</td>\n<td>Features</td>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1st</td>\n<td>+2</td>\n<td>̶</td>\n<td>@Compendium[dnd5e.classfeatures.oygRF3ZjTv2T7z0Y]{Spellcasting}, @Compendium[dnd5e.classfeatures.cmRCL9T9UgRYOj1c]{Sorcerous Origins}</td>\n</tr>\n<tr>\n<td>2nd</td>\n<td>+2</td>\n<td>2</td>\n<td>@Compendium[dnd5e.classfeatures.LBKChJY5n02Afhnq]{Font of Magic}</td>\n</tr>\n<tr>\n<td>3rd</td>\n<td>+2</td>\n<td>3</td>\n<td>2nd Level Spell Slot, @Compendium[dnd5e.classfeatures.9Uh7uTDNZ04oTJsL]{Metamagic}</td>\n</tr>\n<tr>\n<td>4th</td>\n<td>+2</td>\n<td>4</td>\n<td>@Compendium[dnd5e.classfeatures.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>5th</td>\n<td>+3</td>\n<td>5</td>\n<td>3rd Level Spell Slot</td>\n</tr>\n<tr>\n<td>6th</td>\n<td>+3</td>\n<td>6</td>\n<td>Sorcerous Origin feature</td>\n</tr>\n<tr>\n<td>7th</td>\n<td>+3</td>\n<td>7</td>\n<td>4th Level Spell Slot</td>\n</tr>\n<tr>\n<td>8th</td>\n<td>+3</td>\n<td>8</td>\n<td>@Compendium[dnd5e.classfeatures.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>9th</td>\n<td>+4</td>\n<td>9</td>\n<td>5th Level Spell Slot</td>\n</tr>\n<tr>\n<td>10th</td>\n<td>+4</td>\n<td>10</td>\n<td>@Compendium[dnd5e.classfeatures.9Uh7uTDNZ04oTJsL]{Metamagic improvement}</td>\n</tr>\n<tr>\n<td>11th</td>\n<td>+4</td>\n<td>11</td>\n<td>6th Level Spell Slot</td>\n</tr>\n<tr>\n<td>12th</td>\n<td>+4</td>\n<td>12</td>\n<td>@Compendium[dnd5e.classfeatures.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>13th</td>\n<td>+5</td>\n<td>13</td>\n<td>7th Level Spell Slot</td>\n</tr>\n<tr>\n<td>14th</td>\n<td>+5</td>\n<td>14</td>\n<td>Sorcerous Origin feature</td>\n</tr>\n<tr>\n<td>15th</td>\n<td>+5</td>\n<td>15</td>\n<td>8th Level Spell Slot</td>\n</tr>\n<tr>\n<td>16th</td>\n<td>+5</td>\n<td>16</td>\n<td>@Compendium[dnd5e.classfeatures.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>17th</td>\n<td>+6</td>\n<td>17</td>\n<td>9th Level Spell Slot, @Compendium[dnd5e.classfeatures.9Uh7uTDNZ04oTJsL]{Metamagic improvement}</td>\n</tr>\n<tr>\n<td>18th</td>\n<td>+6</td>\n<td>18</td>\n<td>Sorcerous Origin feature</td>\n</tr>\n<tr>\n<td>19th</td>\n<td>+6</td>\n<td>19</td>\n<td>@Compendium[dnd5e.classfeatures.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>20th</td>\n<td>+6</td>\n<td>20</td>\n<td>@Compendium[dnd5e.classfeatures.F2lEKSmOY0NUruzY]{Sorcerous Restoration}</td>\n</tr>\n</tbody>\n</table>\n<h1>Sorcerous Origins</h1>\n<p>Different sorcerers claim different origins for their innate magic, such as a draconic bloodline.</p>\n<h2>Draconic Bloodline</h2>\n<p>Your innate magic comes from draconic magic that was mingled with your blood or that of your ancestors. Most often, sorcerers with this origin trace their descent back to a mighty sorcerer of ancient times who made a bargain with a dragon or who might even have claimed a dragon parent. Some of these bloodlines are well established in the world, but most are obscure. Any given sorcerer could be the first of a new bloodline, as a result of a pact or some other exceptional circumstance.</p>\n<h3>Draconic Bloodline Features</h3>\n<p>1st Level: @Compendium[dnd5e.classfeatures.EZsonMThTNLZq35j]{Dragon Ancestor} @Compendium[dnd5e.classfeatures.MW1ExvBLm8Hg82aA]{Draconic Resilience}</p>\n<p>6th Level: @Compendium[dnd5e.classfeatures.x6eEZ9GUsuOcEa3G]{Elemental Affinity}</p>\n<p>14th Level: @Compendium[dnd5e.classfeatures.3647zjKSE9zFwOXc]{Dragon Wings}</p>\n<p>18th Level: @Compendium[dnd5e.classfeatures.Gsha4bl0apxqspFy]{Draconic Presence}</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "levels": 3,
+        "subclass": "",
+        "hitDice": "d6",
+        "hitDiceUsed": 0,
+        "skills": {
+          "number": 2,
+          "choices": [
+            "arc",
+            "dec",
+            "ins",
+            "itm",
+            "per",
+            "rel"
+          ],
+          "value": []
+        },
+        "spellcasting": "full",
+        "damage": {
+          "parts": []
+        }
+      },
+      "sort": 120001,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.dnd5e.classes.6T08zzKtmmpVwlXU"
+        }
+      },
+      "img": "systems/dnd5e/icons/skills/fire_08.jpg",
+      "effects": []
+    }
+  ],
+  "effects": []
+}
